@@ -1,18 +1,18 @@
 html {
     height:     100%;
-    background: $dark;
+    background: #fff;
     font-size:  16px;
 }
 
 ::-moz-selection {
-    background: $accent;
-    color: $white;
+    background:  black;
+    color:       white;
     text-shadow: none;
 }
 
 ::selection {
-    background: $accent;
-    color: $white;
+    background:  black;
+    color:       white;
     text-shadow: none;
 }
 

@@ -1,41 +1,18 @@
-/* Base */
-@import "normalize";
-@import "grid";
+/* Base styles */
+@import "base-styles/normalize";
+@import "base-styles/grid";
+@import "base-styles/base";
 
-/*Global*/
-@import "colours";
-@import "fonts";
-@import "typography";
+/*Global variables */
+@import "global-variables/colours";
+@import "global-variables/transitions";
+
+
+@import "typography/font-variables";
+@import "typography/global-typography";
+
+
 @import "variables";
-@import "base";
 
 /* Helpers */
-@import "helpers";
-@import "sticky-footer";
-@import "centering";
-
-/* Landing page sections */
-@import "hero";
-
-/* Homepage sections */
-@import "sections/header";
-@import "sections/intro";
-@import "sections/benefits";
-@import "sections/speakers";
-@import "sections/venue";
-@import "sections/directions";
-@import "sections/schedule";
-@import "sections/tickets";
-@import "sections/partners";
-@import "sections/footer";
-
-/* Speaker page sections */
-@import "sections/bio";
-@import "sections/talk";
-
-/* Other sections */
-@import "sections/info";
-
-/* Other styles */
-@import "button";
-@import "extras";
+@import "helpers/sticky-footer";

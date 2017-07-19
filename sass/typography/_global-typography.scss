@@ -7,18 +7,14 @@ html {
     -ms-font-feature-settings:      "liga" 1;
     -o-font-feature-settings:       "liga" 1;
     font-feature-settings:          "liga" 1;
-    font-family: $sans-light;
+    font-family: $sans-serif;
     color: $dark;
 }
 
-$size1: 0.875rem;
-$size2: 1.0rem;
-$size3: 1.125rem;
-$size4: 1.5rem;
-$size5: 2.0rem;
-$size6: 2.6875rem;
-$size7: 3.5625rem;
-$size8: 4.75rem;
+$font-size-sm: 0.875rem;
+$font-size-md: 1.0rem;
+$font-size-lg: 1.125rem;
+$font-size-xl: 1.5rem;
 
 h1,
 h2,
@@ -31,19 +27,11 @@ a {
 }
 
 h1 {
-    font-family: $serif;
+    font-family: $sans-serif;
     font-size: 3.5625rem;
     line-height: 1.0;
     font-weight: 700;
     color: $accent;
-
-    @media (max-width: 767px) {
-        font-size: 2.6875rem;
-    }
-
-    @media (max-width: 374px) {
-        font-size: 2.28rem;
-    }
 }
 
 h2 {
@@ -53,14 +41,14 @@ h2 {
 }
 
 h3 {
-    font-family: $serif;
+    font-family: $sans-serif;
     font-size: 2.0rem;
     line-height: 1.0;
     font-weight: 700;
 }
 
 h4 {
-    font-family: $sans-bold;
+    font-family: $sans-serif;
     font-size: 1.125rem;
     line-height: 1.7rem;
     font-weight: 700;
@@ -71,11 +59,6 @@ p {
     line-height: 1.7;
 }
 
-p.intro {
-    font-size: 1.5rem;
-    line-height: 1.7;
-}
-
 ul {
     list-style:   none;
     margin-left:  1.0rem;
@@ -83,7 +66,7 @@ ul {
 }
 
 li {
-    font-size:    $size2;
+    font-size:    $font-size-md;
     line-height:  1.5;
     padding-left: 1.0rem;
     text-indent:  -1.0rem;
@@ -93,13 +76,4 @@ li:before {
     content:       "•";
     padding-right: 0.5rem;
     color:         $dark;
-}
-
-.underline {
-    text-decoration: underline;
-}
-
-strong {
-    font-family: $sans-bold;
-    font-weight: 700;
 }
