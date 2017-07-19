@@ -10,6 +10,7 @@
 
         <!-- Styles and scripts -->
         <link rel="stylesheet" href="/css/main.css">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="/js/main.js"></script>
         <!-- Fonts -->
 
@@ -31,31 +32,33 @@
     <body>
         <h1>Better Placeholder</h1>
         
-        <label for="width">Width</label>
-        <input name="width" id="width" type="number" required>
-        <label for="height">Height</label>
-        <input name="height" id="height" type="number">
-        <label for="bgcolour">Background Colour</label>
-        <input name="bgcolour" id="bgcolour" type="text" maxlength="6">
-        <label for="textcolour">Text Colour</label>
-        <input name="textcolour" id="textcolour" type="text" maxlength="6">
+        <label for="input-width">Width</label>
+        <input name="input-width" id="input-width" type="number" required>
+        <label for="input-height">Height</label>
+        <input name="input-height" id="input-height" type="number">
+        <label for="input-bgcolour">Background Colour</label>
+        <input name="input-bgcolour" id="input-bgcolour" type="text" maxlength="6">
+        <label for="input-textcolour">Text Colour</label>
+        <input name="input-textcolour" id="input-textcolour" type="text" maxlength="6">
         <fieldset>
             <legend>File Format</legend>
-            <label for="filetype-png">
-                <input type="radio" value="png" name="filetype" id="filetype-png"> PNG
+            <label for="input-filetype-png">
+                <input type="radio" value="png" name="filetype" id="input-filetype-png"> PNG
             </label>
-            <label for="filetype-gif">
-                <input type="radio" value="gif" name="filetype" id="filetype-gif"> GIF
+            <label for="input-filetype-gif">
+                <input type="radio" value="gif" name="filetype" id="input-filetype-gif"> GIF
             </label>
-            <label for="filetype-jpg">
-                <input type="radio" value="jpg" name="filetype" id="filetype-jpg"> JPG
+            <label for="input-filetype-jpg">
+                <input type="radio" value="jpg" name="filetype" id="input-filetype-jpg"> JPG
             </label>
-            <label for="filetype-jpeg">
-                <input type="radio" value="jpeg" name="filetype" id="filetype-jpeg"> JPEG
+            <label for="input-filetype-jpeg">
+                <input type="radio" value="jpeg" name="filetype" id="input-filetype-jpeg"> JPEG
             </label>
         </fieldset>
-        <label for="text-string">Custom Text</label>
-        <input name="text-string" type="text">
+        <label for="input-string">Custom Text</label>
+        <input name="input-string" id="input-string" type="text">
+        <p>http://via.placeholder.com/<span id="width"></span></p>
+        <button>Copy</button>
 
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
         <script>
