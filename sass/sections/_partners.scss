@@ -1,0 +1,38 @@
+.partners {
+	background:     $light;
+	padding-top:    4.0rem;
+	padding-bottom: 4.0rem;
+	text-align:     center;
+}
+
+.partners__freeagent {
+	margin: 0 auto 2.0rem;
+
+	img {
+		margin-left: 0.5rem;
+		-webkit-transition:     $transition-short;
+		transition:  $transition-short;
+
+		&:hover {
+			-webkit-transform: scale(1.05);
+			        transform: scale(1.05);
+		}
+	}
+}
+
+.partners__call {
+	font-family: $sans-bold;
+	font-weight: 400;
+}
+
+.partners__response {
+	a {
+		color:              $dark;
+		-webkit-transition: $transition-short;
+		transition:         $transition-short;
+
+		&:hover {
+			color: $accent;
+		}
+	}
+}

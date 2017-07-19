@@ -1,0 +1,30 @@
+html {
+    height:     100%;
+    background: $dark;
+    font-size:  16px;
+}
+
+::-moz-selection {
+    background: $accent;
+    color: $white;
+    text-shadow: none;
+}
+
+::selection {
+    background: $accent;
+    color: $white;
+    text-shadow: none;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+img {
+    max-width: 100%;
+}

@@ -1,0 +1,151 @@
+ .footer {
+	background:     $dark;
+	padding-top:    2.0rem;
+	padding-bottom: 2.0rem;
+}
+
+.footer__row {
+	@media (min-width: 768px) {
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+  		display:     -webkit-box;
+  		display:     -ms-flexbox;
+  		display:     flex;
+	}
+}
+
+.footer__logo {
+
+	@media (max-width: 991px) {
+		-webkit-box-align:     center;
+		    -ms-flex-align:     center;
+		        align-items:     center;
+		display:         -webkit-box;
+		display:         -ms-flexbox;
+		display:         flex;
+		-ms-flex-pack: distribute;
+		    justify-content: space-around;
+	}
+
+	img {
+		width: 3.625rem;
+	}
+}
+
+.footer__links {
+	@media (max-width: 767px) {
+		margin-top: -2.0rem;
+	}
+
+	ul {
+		margin-left: 0;
+	}
+
+	li {
+		padding-left: 0;
+
+		a {
+			color:   		 $white;
+			display: 		 inline-block;
+			font-size:       $size1;
+			text-decoration: none;
+
+			&:hover {
+				color: $accent;
+			}
+		}
+	}
+}
+
+.footer__newsletter {
+	@media (max-width: 767px) {
+		margin-bottom: 4.0rem;
+	}
+}
+
+fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+input[type="email"] {
+	background:        $light;
+	border:  		   none;
+	border-radius: 	   0.125rem;
+	box-shadow:        0;
+	display: 		   inline-block;
+	font-size: 		   $size2;
+	height:  		   2.5rem;
+	line-height: 	   normal;
+	margin:  		   0 0.125rem 0 0;
+	outline: 		   0;
+	padding:           0 0.5rem;
+	position:          relative;
+	top:               0.1875rem;
+	vertical-align:    middle;
+	width:   		   100%;
+   -webkit-appearance: none;
+
+	@media (min-width: 992px) {
+		max-width: 72%;
+	}
+
+	@media (min-width: 1200px) {
+		max-width: 76%;
+	}
+
+	@media (max-width: 9999px) {
+		margin-bottom: 0.5rem;
+	}
+
+	&:focus {
+		background-color: $white;
+	}
+}
+
+input:focus::-webkit-input-placeholder {
+	color:              transparent;
+	transition: 		$transition-medium;
+	-webkit-transition: $transition-medium;
+	-moz-transition: 	$transition-medium;
+	-o-transition: 		$transition-medium;
+}
+input:focus:-moz-placeholder {
+	color:              transparent !important; 
+	transition: 		$transition-medium;
+	-webkit-transition: $transition-medium;
+	-moz-transition: 	$transition-medium;
+	-o-transition: 		$transition-medium;
+}
+
+fieldset button,
+fieldset input[type="submit"] {
+	background:    $accent;
+	border:  	   0;
+	border-radius: 0.125rem;
+	color:         $white;
+	font-family:   $sans-bold;
+	font-size:     1.0rem;
+	font-weight:   700;
+	height:        2.5rem;
+	outline: 	   0;
+	padding-left:  1.0rem;
+	padding-right: 1.0rem;
+	-webkit-transition:     $link-transition;
+	transition:    $link-transition;
+
+	&:hover,
+	&:focus {
+		background: $accent-hover;
+	} 
+
+	@media (max-width: 991px) {
+		width: 100%;
+	}
+}
+
+input:invalid {
+	border-bottom: 1px solid $error;
+}

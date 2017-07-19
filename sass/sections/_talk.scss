@@ -1,0 +1,65 @@
+.talk {
+	background:     $light;
+	padding-top:    4.0rem;
+	padding-bottom: 4.0rem;
+}
+
+.talk__title {
+	font-family:   $serif;
+	font-size:     $size5;
+	font-weight:   700;
+	line-height:   1.0;
+	margin-bottom: 0.5rem;
+}
+
+.talk__time {
+	display:     inline-block;
+	font-family: $sans-bold;
+	font-size:   $size2;
+	font-weight: 700;
+	position:    relative;
+	top:         0.0625rem;
+
+	@media (max-width: 991px) {
+		margin-bottom: 1.0rem;
+	}
+}
+
+.talk__copy {
+	h3 {
+		font-family: $sans-bold;
+		font-size:   $size3;
+		font-weight: 700;
+		margin:      2.0rem 0 1.0rem;
+	}
+
+	p {
+		margin-bottom: 1.0rem;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	.secondary {
+		font-size: $size2;
+	}
+
+	hr {
+		border:     0;
+		border-top: 0.0625rem solid $medium;
+		margin:     1.5rem 0;
+		width:      100%;
+
+		@media (max-width: 991px) {
+			width: 66.6%;
+		}
+	}
+}
+
+.talk__divider {
+	border:     0;
+	border-top: 0.0625rem solid $medium;
+	margin: 	4.0rem auto;
+	width:      100%;
+}

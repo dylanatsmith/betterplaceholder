@@ -1,0 +1,81 @@
+.intro {
+	background:       $white;
+	padding-top:      11.625rem;
+	padding-bottom:   8.0rem;
+	text-align:       center;
+
+	@media (max-width: 767px) {
+		padding-top: 	7.625rem;
+		padding-bottom: 4.0rem;
+	}
+
+	h1 {
+		font-size: $size7;
+		margin-bottom: 0.5rem;
+
+		@media (max-width: 767px) {
+			font-size: $size6;
+		}
+
+		@media (max-width: 333px) {
+			font-size: $size5;
+		}
+	}
+}
+
+.intro__date {
+	font-family: $sans-bold;
+	font-size:   $size3;
+	font-weight: 700;
+	text-transform: uppercase;
+
+	@media (max-width: 333px) {
+		font-size: $size2;
+	}
+}
+
+.intro__tagline {
+	font-size:  $size4;
+	line-height: 1.333;
+	margin-top: 1.0rem;
+
+	@media (max-width: 767px) {
+		font-size: $size3;
+	}
+}
+
+.button.button--intro {
+	display: 		 inline-block;
+	margin-top:      1.0rem;
+	padding:		 1.0rem 2.0rem;
+	text-decoration: none;
+	width: 			 auto;
+}
+
+.button.button--intro.button--twitter {
+	background: 	 $white;
+	border:          0.0625rem solid $accent;
+	color: 			 $accent;
+	display: 		 inline-block;
+	margin-top:      1.0rem;
+	margin-left: 	 0.5rem;
+	padding:		 1.0rem 2.0rem;
+	position: 		 relative;
+	text-decoration: none;
+	top: 			 0.0625rem;
+	width: 			 auto;
+
+	&:hover {
+		background: $light;
+	}
+
+	@media (max-width: 767px) {
+		display: none;
+	}
+}
+
+.button.button--intro:hover,
+.button.button--intro.button--twitter:hover {
+	position: relative;
+	top: 	  -0.125rem;
+}

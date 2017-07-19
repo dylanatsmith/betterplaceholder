@@ -1,0 +1,44 @@
+.subfooter {
+	padding-top:    4.0rem;
+	padding-bottom: 4.0rem;
+	background-color: $dark;
+	background: url(/img/bg-subfooter.svg);
+	background-repeat: repeat;
+
+	h4,
+	p {
+		color: $white;
+	}
+
+}
+
+bb-button {
+	font-size: 1.0rem;
+	font-weight: 700;
+	letter-spacing: 0px;
+	color: $white;
+	background: $dark;
+	width: inital;
+	border: 0;
+	border: 1px solid $white;
+	height: 2.5rem;
+	padding-left: 2.0rem;
+	padding-right: 2.0rem;
+	outline: 0;
+	border-radius: 2px;
+	margin-top: 0.5rem;
+	-webkit-transition:    $link-transition;
+	transition: $link-transition;
+
+	&:hover,
+	&:focus {
+		background: $white;
+		color: $dark;
+	} 
+}
+
+button.first {
+	@media (max-width: 767px) {
+		margin-bottom: 2.0rem;
+	}
+}

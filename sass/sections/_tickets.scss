@@ -1,0 +1,141 @@
+.tickets {
+	background: 	$white;
+	padding-top:    8.0rem;
+	padding-bottom: 8.0rem;
+
+	@media (max-width: 767px) {
+		padding-top: 4.0rem;
+		padding-bottom: 4.0rem;
+	}
+
+	h2 {
+		font-family:    $black;
+		font-size:      $size6;
+		margin:         0 auto 2.0rem;
+		text-transform: uppercase;
+	}
+}
+
+.ticket {
+	background:    $white;
+	border-radius: 0.125rem;
+	box-shadow:    $shadow;
+	cursor:        default;
+	position:      inital;
+	text-align:    center;
+	top:           0;
+	-webkit-transition: 	$transition-short;
+	transition:    $transition-short;
+
+	&:hover {
+		box-shadow: $shadow-hover;
+		position:   relative;
+		top:        -0.0625rem;
+	}
+
+	@media (max-width: 991px) {
+		margin-bottom: 2.0rem;
+	}
+}
+
+.ticket--unavailable {
+	opacity: 0.3;
+
+	&:hover {
+		box-shadow:    $shadow;
+		position:      inital;
+		top:           0;
+	}
+
+	.ticket__button {
+		cursor: default;
+
+		&:hover {
+			background: $accent;
+		}
+	}
+}
+
+.ticket--earlybird {
+	.ticket__banner {
+		background: $accent;
+	}
+}
+
+.ticket__banner {
+	background:     $dark;
+	border-radius:  0.125rem 0.125rem 0 0;
+	color:          $white;
+	font-family:    $black;
+	padding:        0.125rem;
+	text-transform: uppercase;
+}
+
+.ticket__icon {
+	margin-top:   -0.125rem;
+	margin-right: 0.25rem;
+}
+
+.ticket__name {
+	font-family: $serif;
+	font-size:   $size5;
+	margin:      1.0rem 1.0rem;
+}
+
+.ticket__details {
+	background:  $light;
+	font-family: $sans-light;
+	font-size:   $size1;
+	line-height: 1.3;
+	padding:     0.5rem 1.0rem;
+	text-align:  left;
+}
+
+.ticket__price {
+	display:     block;
+	font-family: $sans-bold;
+	font-size:   $size4;
+	line-height: 1.0;
+	margin:      1.0rem 0;
+}
+
+.ticket__button {
+	background:     $accent;
+	border: 		0;
+	border-radius:  0.125rem;
+	color:          $white;
+	font-family:    $sans-bold;
+	font-size:      $size2;
+	font-weight:    700;
+	height: 		3.0rem;
+	line-height:    1.0;
+	margin-bottom:  1.0rem;
+	outline: 		0;
+	padding:        0.5rem;
+	text-transform: uppercase;
+	-webkit-transition: 	$link-transition;
+	transition:     $link-transition;
+	width:          calc(100% - 2.0rem);
+
+	&:hover {
+		background: $accent-hover;
+	}
+}
+
+.tickets__call {
+	font-family: $sans-light;
+	font-weight: 400;
+	margin-top:  2.0rem;
+}
+
+.tickets__response {
+	a {
+		color:      $dark;
+		-webkit-transition:     $transition-short;
+		transition: $transition-short;
+
+		&:hover {
+			color: $accent;
+		}
+	}
+}
