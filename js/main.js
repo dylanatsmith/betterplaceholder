@@ -29,5 +29,9 @@ $(function () {
 // When URL changes
 //   Remove disabled state from preview button
 
+// Button for each option to clear value
+
+// Button to clear all values
+
 
 }); // Close doc ready
