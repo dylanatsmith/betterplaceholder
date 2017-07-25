@@ -4,6 +4,11 @@ html {
     font-size:  16px;
 }
 
+body {
+    margin: 2.0rem auto;
+    width:  50%;
+}
+
 ::-moz-selection {
     background:  black;
     color:       white;
