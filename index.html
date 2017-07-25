@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>Better Placeholder</title>
         <meta name="description" content="Meta description">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Favicon -->
@@ -35,7 +35,7 @@
         <form action="javascript:myFunction(); return false;">
             <h2>Dimensions</h2>
             <label for="input-width">Width</label>
-            <input name="input-width" id="input-width" type="number" required>
+            <input name="input-width" id="input-width" type="number">
             <label for="input-height">Height</label>
             <input name="input-height" id="input-height" type="number">
             <h2>Colours</h2>
@@ -61,13 +61,7 @@
                     <input type="radio" value="jpeg" name="filetype" id="input-filetype-jpeg"> JPEG
                 </label>
             </fieldset>
-            <p>https://via.placeholder.com/</p>
-            <span id="width"></span>
-            <span id="height"></span>
-            <span id="bgcolour"></span>
-            <span id="textcolour"></span>
-            <span id="filetype"></span>
-            <span id="string"></span>
+            <p class="created-url">https://via.placeholder.com/<span id="width"></span><span id="height"></span><span id="bgcolour"></span><span id="textcolour"></span><span id="filetype"></span><span id="string"></span></p>
             <button class="button button--copy">Copy URL</button>
             <button class="button button--reset">Reset</button>
         </form>
