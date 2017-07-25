@@ -24,6 +24,8 @@ var $inputTextcolour = $('#input-textcolour');
 var $string      = $('#string');
 var $inputString = $('#input-string');
 
+var $filetype      = $('#filetype');
+
 // Reenable preview button when any input changes
 $(function () {
   $( 'input' ).on( 'change keydown paste', function () {
@@ -72,6 +74,15 @@ $(function () {
   $inputString.on('change keydown paste', function () {
     setTimeout(function () {
       $string.html('?text=' + $inputString.val());
+    }, 0);
+  });
+})
+
+// Updates value for filetype every time a new radio button is clicked
+$(function () {
+  $('input[name=filetype]').on('change', function () {
+    setTimeout(function () {
+      $filetype.html( '.' + $('input[name=filetype]:checked').val() );
     }, 0);
   });
 })
