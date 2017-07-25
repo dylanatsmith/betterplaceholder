@@ -32,7 +32,7 @@
     </head>
     <body>
         <h1>Better Placeholder</h1>
-        <form action="">
+        <form action="javascript:myFunction(); return false;">
             <h2>Dimensions</h2>
             <label for="input-width">Width</label>
             <input name="input-width" id="input-width" type="number" required>
@@ -72,7 +72,7 @@
             <button class="button button--reset">Reset</button>
         </form>
         <div class="preview">
-            <button class="button button--preview">Update Preview</button>
+            <button class="button button--preview button--disabled">Update Preview</button>
             <div class="preview-image">
                 <img src="https://via.placeholder.com/400x400" alt="">
             </div>
