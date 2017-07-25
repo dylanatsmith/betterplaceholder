@@ -11,8 +11,8 @@
         <!-- Styles and scripts -->
         <link rel="stylesheet" href="/css/main.css">
         <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
-        <script type="text/javascript" src="/js/main.js"></script>
         <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="/js/main.js"></script>
         <!-- Fonts -->
 
         <!-- Open Graph -->
@@ -32,40 +32,51 @@
     </head>
     <body>
         <h1>Better Placeholder</h1>
-        <label for="input-width">Width</label>
-        <input name="input-width" id="input-width" type="number" required>
-        <label for="input-height">Height</label>
-        <input name="input-height" id="input-height" type="number">
-        <label for="input-bgcolour">Background Colour</label>
-        <input name="input-bgcolour" id="input-bgcolour" type="text" maxlength="6">
-        <label for="input-textcolour">Text Colour</label>
-        <input name="input-textcolour" id="input-textcolour" type="text" maxlength="6">
-        <fieldset>
-            <legend>File Format</legend>
-            <label for="input-filetype-png">
-                <input type="radio" value="png" name="filetype" id="input-filetype-png"> PNG
-            </label>
-            <label for="input-filetype-gif">
-                <input type="radio" value="gif" name="filetype" id="input-filetype-gif"> GIF
-            </label>
-            <label for="input-filetype-jpg">
-                <input type="radio" value="jpg" name="filetype" id="input-filetype-jpg"> JPG
-            </label>
-            <label for="input-filetype-jpeg">
-                <input type="radio" value="jpeg" name="filetype" id="input-filetype-jpeg"> JPEG
-            </label>
-        </fieldset>
-        <label for="input-string">Custom Text</label>
-        <input name="input-string" id="input-string" type="text">
-        <p>https://via.placeholder.com/</p>
-        <span id="width"></span>
-        <span id="height"></span>
-        <span id="bgcolour"></span>
-        <span id="textcolour"></span>
-        <span id="filetype"></span>
-        <span id="string"></span>
-        <button>Copy URL</button>
-        <button>Update Preview</button>
+        <form action="">
+            <h2>Dimensions</h2>
+            <label for="input-width">Width</label>
+            <input name="input-width" id="input-width" type="number" required>
+            <label for="input-height">Height</label>
+            <input name="input-height" id="input-height" type="number">
+            <h2>Colours</h2>
+            <label for="input-bgcolour">Background Colour</label>
+            <input name="input-bgcolour" id="input-bgcolour" type="text" maxlength="6">
+            <label for="input-textcolour">Text Colour</label>
+            <input name="input-textcolour" id="input-textcolour" type="text" maxlength="6">
+            <h2>Customisation</h2>
+            <label for="input-string">Custom Text</label>
+            <input name="input-string" id="input-string" type="text">
+            <h2>File Format</h2>
+            <fieldset>
+                <label for="input-filetype-png">
+                    <input type="radio" value="png" name="filetype" id="input-filetype-png"> PNG
+                </label>
+                <label for="input-filetype-gif">
+                    <input type="radio" value="gif" name="filetype" id="input-filetype-gif"> GIF
+                </label>
+                <label for="input-filetype-jpg">
+                    <input type="radio" value="jpg" name="filetype" id="input-filetype-jpg"> JPG
+                </label>
+                <label for="input-filetype-jpeg">
+                    <input type="radio" value="jpeg" name="filetype" id="input-filetype-jpeg"> JPEG
+                </label>
+            </fieldset>
+            <p>https://via.placeholder.com/</p>
+            <span id="width"></span>
+            <span id="height"></span>
+            <span id="bgcolour"></span>
+            <span id="textcolour"></span>
+            <span id="filetype"></span>
+            <span id="string"></span>
+            <button class="button button--copy">Copy URL</button>
+            <button class="button button--reset">Reset</button>
+        </form>
+        <div class="preview">
+            <button class="button button--preview">Update Preview</button>
+            <div class="preview-image">
+                <img src="https://via.placeholder.com/400x400" alt="">
+            </div>
+        </div>
 
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 <!--         <script>
