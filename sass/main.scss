@@ -3,16 +3,16 @@
 @import "base-styles/grid";
 @import "base-styles/base";
 
-/*Global variables */
+/* Global variables */
 @import "global-variables/colours";
 @import "global-variables/transitions";
 
-
+/* Typography */
 @import "typography/font-variables";
 @import "typography/global-typography";
 
-
-@import "variables";
+/* Elements */
+@import "elements/buttons";
 
 /* Helpers */
 /* @import "helpers/sticky-footer"; */
