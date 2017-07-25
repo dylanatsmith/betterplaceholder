@@ -1,14 +1,28 @@
+// TODO
+// - Add colour picker plugin
+// - Change spaces in string to '+'
+// - Disable height until width is entered
+// - Disable text colour until background colour is entered
+// - Add reset button for each
+
 $(document).ready(function() {
 
-	var $width       = $('#width');
-	var $inputWidth  = $('#input-width');
 
-	var $height      = $('#height');
-	var $inputHeight = $('#input-height');
-	
-	var $string      = $('#string');
-	var $inputString = $('#input-string');
+// All the variables
+var $width       = $('#width');
+var $inputWidth  = $('#input-width');
 
+var $height      = $('#height');
+var $inputHeight = $('#input-height');
+
+var $bgcolour      = $('#bgcolour');
+var $inputBgcolour = $('#input-bgcolour');
+
+var $textcolour      = $('#textcolour');
+var $inputTextcolour = $('#input-textcolour');
+
+var $string      = $('#string');
+var $inputString = $('#input-string');
 
 // Updates value for width every time a key is entered in that field
 $(function () {
@@ -21,7 +35,6 @@ $(function () {
   });
 })
 
-
 // Updates value for height every time a key is entered in that field
 $(function () {
   $inputHeight.on( 'change keydown paste', function () {
@@ -33,8 +46,27 @@ $(function () {
   });
 })
 
-// Disable height until width is entered?
+// Updates value for background colour every time a key is entered in that field
+$(function () {
+  $inputBgcolour.on('change keydown paste', function () {
+    setTimeout(function () {
+      $bgcolour.html('/' + $inputBgcolour.val());
+    }, 0);
+    // Reenable preview button
+    $( '.button--preview' ).removeClass( 'button--disabled' );
+  });
+})
 
+// Updates value for text colour every time a key is entered in that field
+$(function () {
+  $inputTextcolour.on('change keydown paste', function () {
+    setTimeout(function () {
+      $textcolour.html('/' + $inputTextcolour.val());
+    }, 0);
+    // Reenable preview button
+    $( '.button--preview' ).removeClass( 'button--disabled' );
+  });
+})
 
 // Updates value for string every time a key is entered in that field
 $(function () {
@@ -47,29 +79,28 @@ $(function () {
   });
 })
 
-// Change spaces in string to '+'
-
-
 // Preview button
 $( '.button--preview' ).click(function() {
+	// Remove existing preview image
 	$( '.preview-image' ).empty();
-	// Change URL to dynamically generated one
-	$( '.preview-image' ).append( '<img src="https://via.placeholder.com/' + $inputWidth.val() + '" alt="Preview placeholder image">' );
+	// Add new image with new URL
+	// $( '.preview-image' ).append( '<img src="https://via.placeholder.com/' + $inputWidth.val() + $('#height').text() + '" alt="Preview placeholder image">' );
+	$( '.preview-image' ).append( '<img src="' + $('.created-url').text() + '">' );
+	// Disable another click
 	$( '.button--preview' ).addClass( 'button--disabled' );
 });
-
-
-// Button for each option to clear value
-
 
 // Button to clear all values
 $('.button--reset').click(function() {
   $(':input','form')
-    .not(':button, :submit, :reset, :hidden, #input-width')
+    .not(':button, :submit, :reset, :hidden')
     .val('')
     .removeAttr('checked')
     .removeAttr('selected');
+  // Clear all the variable spans
+  $( '#width, #height, #bgcolour, #textcolour, #filetype, #string' ).empty();
+  // Reenable preview button
+  $( '.button--preview' ).removeClass( 'button--disabled' );
 });
-
 
 }); // Close doc ready
