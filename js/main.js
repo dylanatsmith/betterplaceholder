@@ -81,9 +81,7 @@ $(function () {
 // Updates value for filetype every time a new radio button is clicked
 $(function () {
   $('input[name=filetype]').on('change', function () {
-    setTimeout(function () {
       $filetype.html( '.' + $('input[name=filetype]:checked').val() );
-    }, 0);
   });
 })
 
