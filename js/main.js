@@ -1,29 +1,24 @@
 // TODO
 // - Add colour picker plugin
+// - Add clipboard.js
 // - Change spaces in string to '+'
 // - Disable height until width is entered
 // - Disable text colour until background colour is entered
-// - Add reset button for each
+// - Add individual reset buttons
 
 $(document).ready(function() {
-
 
 // All the variables
 var $width       = $('#width');
 var $inputWidth  = $('#input-width');
-
 var $height      = $('#height');
 var $inputHeight = $('#input-height');
-
 var $bgcolour      = $('#bgcolour');
 var $inputBgcolour = $('#input-bgcolour');
-
 var $textcolour      = $('#textcolour');
 var $inputTextcolour = $('#input-textcolour');
-
 var $string      = $('#string');
 var $inputString = $('#input-string');
-
 var $filetype      = $('#filetype');
 
 // Reenable preview button when any input changes
