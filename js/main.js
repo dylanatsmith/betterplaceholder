@@ -3,6 +3,7 @@
 // - Disable height until width is entered
 // - Disable text colour until background colour is entered
 // - Add individual reset buttons
+// - Add hints to width/height and colours
 
 $(document).ready(function() {
 
