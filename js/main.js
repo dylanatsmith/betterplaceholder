@@ -1,6 +1,5 @@
 // TODO
 // - Add colour picker plugin
-// - Add clipboard.js
 // - Change spaces in string to '+'
 // - Disable height until width is entered
 // - Disable text colour until background colour is entered
@@ -9,17 +8,17 @@
 $(document).ready(function() {
 
 // All the variables
-var $width       = $('#width');
-var $inputWidth  = $('#input-width');
-var $height      = $('#height');
-var $inputHeight = $('#input-height');
-var $bgcolour      = $('#bgcolour');
-var $inputBgcolour = $('#input-bgcolour');
+var $width           = $('#width');
+var $inputWidth      = $('#input-width');
+var $height          = $('#height');
+var $inputHeight     = $('#input-height');
+var $bgcolour        = $('#bgcolour');
+var $inputBgcolour   = $('#input-bgcolour');
 var $textcolour      = $('#textcolour');
 var $inputTextcolour = $('#input-textcolour');
-var $string      = $('#string');
-var $inputString = $('#input-string');
-var $filetype      = $('#filetype');
+var $string          = $('#string');
+var $inputString     = $('#input-string');
+var $filetype        = $('#filetype');
 
 // Reenable preview button when any input changes
 $(function () {
@@ -79,6 +78,19 @@ $(function () {
       $filetype.html( '.' + $('input[name=filetype]:checked').val() );
   });
 })
+
+// Instantiate clipboard.js
+var clipboard = new Clipboard('.button--copy', {
+  text: function() {
+    return $('.created-url').text();
+  }
+});
+clipboard.on('success', function(e) {
+  console.log(e);
+});
+clipboard.on('error', function(e) {
+  console.log(e);
+});
 
 // Preview button
 $( '.button--preview' ).click(function() {
