@@ -1,6 +1,5 @@
 // TODO
 // - Add colour picker plugin
-// - Change spaces in string to '+'
 // - Disable height until width is entered
 // - Disable text colour until background colour is entered
 // - Add individual reset buttons
@@ -67,7 +66,11 @@ $(function () {
 $(function () {
   $inputString.on('change keydown paste', function () {
     setTimeout(function () {
-      $string.html('?text=' + $inputString.val());
+      // Change spaces for plus signs
+      var str = $inputString.val();
+      var newstr = str.replace(' ', '+');
+      // Display string in URL
+      $string.html('?text=' + newstr);
     }, 0);
   });
 })
