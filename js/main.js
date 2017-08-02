@@ -101,7 +101,6 @@ $( '.button--preview' ).click(function() {
 	// Remove existing preview image
 	$( '.preview-image' ).empty();
 	// Add new image with new URL
-	// $( '.preview-image' ).append( '<img src="https://via.placeholder.com/' + $inputWidth.val() + $('#height').text() + '" alt="Preview placeholder image">' );
 	$( '.preview-image' ).append( '<img src="' + $('.created-url').text() + '">' );
 	// Disable another click
 	$( '.button--preview' ).addClass( 'button--disabled' );
@@ -116,8 +115,12 @@ $('.button--reset').click(function() {
     .removeAttr('selected');
   // Clear all the variable spans
   $( '#width, #height, #bgcolour, #textcolour, #filetype, #string' ).empty();
-  // Reenable preview button
-  $( '.button--preview' ).removeClass( 'button--disabled' );
+  // Remove existing preview image
+  $( '.preview-image' ).empty();
+  // Add new image with new URL
+  $( '.preview-image' ).append( '<img src="https://via.placeholder.com/400x400">' );
+  // Disable another click
+  $( '.button--preview' ).addClass( 'button--disabled' );
 });
 
 }); // Close doc ready
