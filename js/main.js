@@ -20,10 +20,10 @@ var $string          = $('#string');
 var $inputString     = $('#input-string');
 var $filetype        = $('#filetype');
 
-// Reenable preview button when any input changes
+// Reenable preview and reset buttons when any input changes
 $(function () {
   $( 'input' ).on( 'change keydown paste', function () {
-    $( '.button--preview' ).removeClass( 'button--disabled' );
+    $( '.button--preview, .button--reset' ).removeClass( 'button--disabled' );
   });
 })
 
@@ -119,8 +119,8 @@ $('.button--reset').click(function() {
   $( '.preview-image' ).empty();
   // Add new image with new URL
   $( '.preview-image' ).append( '<img src="https://via.placeholder.com/400x400">' );
-  // Disable another click
-  $( '.button--preview' ).addClass( 'button--disabled' );
+  // Disable another click on reset or preview buttons
+  $( '.button--preview, .button--reset' ).addClass( 'button--disabled' );
 });
 
 }); // Close doc ready
