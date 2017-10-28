@@ -1,12 +1,9 @@
 // TODO
-// - Add jQuery minicolours plugin
+// - Add colour picker plugin
 // - Disable height until width is entered
 // - Disable text colour until background colour is entered
 // - Add individual reset buttons
 // - Add hints to width/height and colours
-// - Indicate that # isn't necessary on hex
-// - Add options to Custom Text: "Use image dimensions" "No text"
-// - Disable copy URL when inputs are empty
 
 $(document).ready(function() {
 
@@ -26,7 +23,7 @@ var $filetype        = $('#filetype');
 // Reenable preview and reset buttons when any input changes
 $(function () {
   $( 'input' ).on( 'change keydown paste', function () {
-    $( '.button--preview, .button--reset, .button--copy' ).removeClass( 'button--disabled' );
+    $( '.button--preview, .button--reset' ).removeClass( 'button--disabled' );
   });
 })
 
@@ -123,7 +120,7 @@ $('.button--reset').click(function() {
   // Add new image with new URL
   $( '.preview-image' ).append( '<img src="https://via.placeholder.com/400x400">' );
   // Disable another click on reset or preview buttons
-  $( '.button--preview, .button--reset, .button--copy' ).addClass( 'button--disabled' );
+  $( '.button--preview, .button--reset' ).addClass( 'button--disabled' );
 });
 
 }); // Close doc ready
