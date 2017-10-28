@@ -3,7 +3,6 @@
 // - Disable text colour until background colour is entered
 // - Add individual reset buttons
 // - Add hints to width/height and colours
-// - Indicate that # isn't necessary on hex
 // - Add options to Custom Text: "Use image dimensions" "No text"
 // - Disable copy URL when inputs are empty
 // - Button to switch bgcolor and textcolour
@@ -75,8 +74,9 @@ $(function () {
     setTimeout(function () {
       // Change spaces for plus signs
       var str = $inputString.val();
+      var newStr = '?text=' + str.replace( /\s+/g, '+' );
       // Display string in URL
-      $string.html( '?text=' + str.replace( ' ', '+' ) );
+      $string.html( newStr );
     }, 0);
   });
 })
