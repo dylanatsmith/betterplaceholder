@@ -103,7 +103,7 @@ clipboard.on('error', function(e) {
 });
 
 // Instantiate jQuery minicolors
-$( '.input--colour' ).minicolors(settings);
+$( '.input--colour' ).minicolors();
 
 // Preview button
 $( '.button--preview' ).click(function() {
