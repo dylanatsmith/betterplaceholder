@@ -102,6 +102,9 @@ clipboard.on('error', function(e) {
   console.log(e);
 });
 
+// Instantiate jQuery minicolors
+$( '.input--colour' ).minicolors(settings);
+
 // Preview button
 $( '.button--preview' ).click(function() {
   // Remove existing preview image
