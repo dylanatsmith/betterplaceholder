@@ -1,11 +1,17 @@
 // TODO
-// - Add colour picker plugin
+// - Add jQuery minicolours plugin
 // - Disable height until width is entered
 // - Disable text colour until background colour is entered
 // - Add individual reset buttons
 // - Add hints to width/height and colours
+// - Indicate that # isn't necessary on hex
+// - Add options to Custom Text: "Use image dimensions" "No text"
+// - Disable copy URL when inputs are empty
 
-$(document).ready(function() {
+// Combine JS plugins into main file
+// @codekit-prepend "clipboard.min.js", "jquery-minicolors.min.js";
+
+$( document ).ready(function() {
 
 // All the variables
 var $width           = $('#width');
@@ -23,7 +29,7 @@ var $filetype        = $('#filetype');
 // Reenable preview and reset buttons when any input changes
 $(function () {
   $( 'input' ).on( 'change keydown paste', function () {
-    $( '.button--preview, .button--reset' ).removeClass( 'button--disabled' );
+    $( '.button--preview, .button--reset, .button--copy' ).removeClass( 'button--disabled' );
   });
 })
 
@@ -98,12 +104,12 @@ clipboard.on('error', function(e) {
 
 // Preview button
 $( '.button--preview' ).click(function() {
-	// Remove existing preview image
-	$( '.preview-image' ).empty();
-	// Add new image with new URL
-	$( '.preview-image' ).append( '<img src="' + $('.created-url').text() + '">' );
-	// Disable another click
-	$( '.button--preview' ).addClass( 'button--disabled' );
+  // Remove existing preview image
+  $( '.preview-image' ).empty();
+  // Add new image with new URL
+  $( '.preview-image' ).append( '<img src="' + $( '.created-url' ).text() + '">' );
+  // Disable another click
+  $( '.button--preview' ).addClass( 'button--disabled' );
 });
 
 // Button to clear all values
@@ -119,8 +125,8 @@ $('.button--reset').click(function() {
   $( '.preview-image' ).empty();
   // Add new image with new URL
   $( '.preview-image' ).append( '<img src="https://via.placeholder.com/400x400">' );
-  // Disable another click on reset or preview buttons
-  $( '.button--preview, .button--reset' ).addClass( 'button--disabled' );
+  // Disable another click on reset, preview, and copy buttons
+  $( '.button--preview, .button--reset, .button--copy:not(.preview-image)' ).addClass( 'button--disabled' );
 });
 
 }); // Close doc ready
