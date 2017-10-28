@@ -1,5 +1,4 @@
 // TODO
-// - Add jQuery minicolours plugin
 // - Disable height until width is entered
 // - Disable text colour until background colour is entered
 // - Add individual reset buttons
@@ -7,6 +6,7 @@
 // - Indicate that # isn't necessary on hex
 // - Add options to Custom Text: "Use image dimensions" "No text"
 // - Disable copy URL when inputs are empty
+// - Button to switch bgcolor and textcolour
 
 // Combine JS plugins into main file
 // @codekit-prepend "clipboard.min.js", "jquery-minicolors.min.js";
@@ -55,7 +55,7 @@ $(function () {
 $(function () {
   $inputBgcolour.on('change keydown paste', function () {
     setTimeout(function () {
-      $bgcolour.html('/' + $inputBgcolour.val());
+      $bgcolour.html( '/' + $inputBgcolour.val().replace( '#', '' ) );
     }, 0);
   });
 })
@@ -64,7 +64,7 @@ $(function () {
 $(function () {
   $inputTextcolour.on('change keydown paste', function () {
     setTimeout(function () {
-      $textcolour.html('/' + $inputTextcolour.val());
+      $textcolour.html('/' + $inputTextcolour.val().replace( '#', '' ) );
     }, 0);
   });
 })
