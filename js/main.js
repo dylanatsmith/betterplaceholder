@@ -75,9 +75,8 @@ $(function () {
     setTimeout(function () {
       // Change spaces for plus signs
       var str = $inputString.val();
-      var newstr = str.replace(' ', '+');
       // Display string in URL
-      $string.html('?text=' + newstr);
+      $string.html( '?text=' + str.replace( ' ', '+' ) );
     }, 0);
   });
 })
