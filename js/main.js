@@ -1,12 +1,3 @@
-// TODO
-// - Disable height until width is entered
-// - Disable text colour until background colour is entered
-// - Add individual reset buttons
-// - Add hints to width/height and colours
-// - Add options to Custom Text: "Use image dimensions" "No text"
-// - Disable copy URL when inputs are empty
-// - Button to switch bgcolor and textcolour
-
 // Combine JS plugins into main file
 // @codekit-prepend "clipboard.min.js", "jquery-minicolors.min.js";
 
