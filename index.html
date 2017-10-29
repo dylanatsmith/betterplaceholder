@@ -59,11 +59,11 @@
             <hr>
 
             <h2>Colours</h2>
-            <label for="input-bgcolour">Background Colour
-              <input name="input-bgcolour" id="input-bgcolour" class="input--colour" type="text" maxlength="6">
+            <label for="input-bgcolour">Background
+              <input name="input-bgcolour" id="input-bgcolour" class="input--colour" type="text" maxlength="6" value="#ccc">
             </label>
-            <label for="input-textcolour">Text Colour
-              <input name="input-textcolour" id="input-textcolour" class="input--colour" type="text" maxlength="6">
+            <label for="input-textcolour">Text
+              <input name="input-textcolour" id="input-textcolour" class="input--colour" type="text" maxlength="6" value="#969696">
             </label>
 
             <hr>
@@ -100,6 +100,8 @@
       
         <div class="panel panel--output">
 
+          <h2>Output URL</h2>
+
           <span class="created-url">https://via.placeholder.com/<span id="width"></span><span id="height"></span><span id="bgcolour"></span><span id="textcolour"></span><span id="filetype"></span><span id="string"></span></span>
 
           <button class="button button--preview button--disabled">Update Preview</button>
@@ -110,6 +112,7 @@
 
         <div class="preview">
           <div class="preview-image button--copy">
+            <div class="preview__overlay"></div>
             <img src="https://via.placeholder.com/400x400" alt="Preview of placeholder image">
           </div>
 

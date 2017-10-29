@@ -1,4 +1,18 @@
 .preview-image {
 	cursor: pointer;
 	display: inline-block;
+	position: relative;
+
+	.preview__overlay {
+		background: red;
+		display:    block;
+		height:     100%;
+		opacity:    0;
+		position:   absolute;
+		width:      100%;
+	}
+
+	&:hover .preview__overlay {
+		opacity: 0.5;
+	}
 }
