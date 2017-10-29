@@ -8,7 +8,7 @@ html {
     -o-font-feature-settings:       "liga" 1;
     font-feature-settings:          "liga" 1;
     font-family: $sans-serif;
-    color: $dark;
+    color: $black;
 }
 
 h1,
@@ -26,7 +26,7 @@ h1 {
     font-size: 3.5625rem;
     line-height: 1.0;
     font-weight: 700;
-    color: $dark;
+    color: $black;
 }
 
 h2 {
@@ -70,5 +70,5 @@ li {
 li:before {
     content:       "•";
     padding-right: 0.5rem;
-    color:         $dark;
+    color:         $black;
 }
