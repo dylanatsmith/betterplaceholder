@@ -116,6 +116,12 @@ $('.button--reset').click(function() {
     .removeAttr('selected');
   // Clear all the variable spans
   $( '#width, #height, #bgcolour, #textcolour, #filetype, #string' ).empty();
+  // Reset colours to defaults
+  $( '#input-bgcolour' ).val( '#ccc' );
+  $( '#input-textcolour' ).val( '#969696' );
+  // Reset colour swatches
+  $( 'label[for=input-bgcolour' ).find( '.minicolors-swatch-color' ).attr( 'style', 'background-color: rgb(204, 204, 204); opacity: 1;' );
+  $( 'label[for=input-textcolour' ).find( '.minicolors-swatch-color' ).attr( 'style', 'background-color: rgb(150, 150, 150); opacity: 1;' );
   // Remove existing preview image
   $( '.preview-image' ).empty();
   // Add new image with new URL
