@@ -46,6 +46,7 @@ $(function () {
   $inputBgcolour.on('change keydown paste', function () {
     setTimeout(function () {
       $bgcolour.html( '/' + $inputBgcolour.val().replace( '#', '' ) );
+      $textcolour.html('/' + $inputTextcolour.val().replace( '#', '' ) );
     }, 0);
   });
 })
@@ -54,6 +55,7 @@ $(function () {
 $(function () {
   $inputTextcolour.on('change keydown paste', function () {
     setTimeout(function () {
+      $bgcolour.html( '/' + $inputBgcolour.val().replace( '#', '' ) );
       $textcolour.html('/' + $inputTextcolour.val().replace( '#', '' ) );
     }, 0);
   });
