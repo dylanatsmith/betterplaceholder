@@ -1,0 +1,19 @@
+.panel {
+	background:    $white;
+	border:        0.0625rem solid $light;
+	border-radius: 0.125rem;
+	padding:       1.0rem;
+}
+
+h2 {
+	font-size:     $font-size-lg;
+	font-weight:   $font-weight-bold;
+	margin-bottom: 0.5rem;
+}
+
+hr {
+	background: $light;
+	border:     none;
+	height:     0.0625rem;
+	margin:     1.0rem 0;
+}
