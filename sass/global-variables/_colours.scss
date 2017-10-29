@@ -1,5 +1,4 @@
 $white:  #fff;
-
-$light:  #f1f1ef;
-
-$black:  #1e1e1d;
+$light:  #eee;
+$black:  #111;
+$medium: lighten($black, 60%);
