@@ -1,14 +1,16 @@
 .panel {
 	background:    $white;
 	border:        0.0625rem solid $light;
-	border-radius: 0.125rem;
+	border-radius: 0.25rem;
 	padding:       1.0rem;
 }
 
 h2 {
-	font-size:     $font-size-lg;
-	font-weight:   $font-weight-bold;
-	margin-bottom: 0.5rem;
+	color:          $medium;
+	font-size:      $font-size-sm;
+	font-weight:    $font-weight-bold;
+	margin-bottom:  0.5rem;
+	text-transform: uppercase;
 }
 
 hr {
@@ -16,6 +18,12 @@ hr {
 	border:     none;
 	height:     0.0625rem;
 	margin:     1.0rem 0;
+}
+
+fieldset {
+	border:  0;
+	margin:  0;
+	padding: 0;
 }
 
 .panel--input {
