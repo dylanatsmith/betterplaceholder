@@ -33,7 +33,7 @@
 
   <header class="container-fluid">
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
         <h1>Better Placeholder</h1>
         <span>Placeholdit's Missing UI</span>
       </div>
@@ -42,36 +42,43 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-3 col-md-offset-2">
+      <div class="col-sm-4 col-md-offset-1 col-lg-3 col-lg-offset-2">
 
         <form action="javascript:myFunction(); return false;">
 
           <div class="panel panel--input">
             <h2>Dimensions</h2>
 
-            <label for="input-width">Width</label>
-            <input name="input-width" id="input-width" type="number">
-            </label>
-            <label for="input-height">Height
+            <div class="split">
+              <label for="input-width">Width</label>
+              <input name="input-width" id="input-width" type="number">
+            </div>
+
+            <div class="split">
+              <label for="input-height">Height</label>
               <input name="input-height" id="input-height" type="number">
-            </label>
+            </div>
 
             <hr>
 
             <h2>Colours</h2>
-            <label for="input-bgcolour">Background
+
+            <div class="split">
+              <label for="input-bgcolour">Background</label>
               <input name="input-bgcolour" id="input-bgcolour" class="input--colour" type="text" maxlength="6" value="#ccc">
-            </label>
-            <label for="input-textcolour">Text
+            </div>
+
+            <div class="split">
+              <label for="input-textcolour">Text</label>
               <input name="input-textcolour" id="input-textcolour" class="input--colour" type="text" maxlength="6" value="#969696">
-            </label>
+            </div>
 
             <hr>
 
-            <h2>Customisation</h2>
-            <label for="input-string">Custom Text
-              <input name="input-string" id="input-string" type="text">
-            </label>
+            <h2>TEXT</h2>
+
+            <label for="input-string">Custom Text</label>
+            <input name="input-string" id="input-string" type="text">
 
             <hr>
             
@@ -96,7 +103,7 @@
         </form>
 
       </div>
-      <div class="col-md-5">
+      <div class="col-sm-8 col-md-6 col-lg-5">
       
         <div class="panel panel--output">
 
