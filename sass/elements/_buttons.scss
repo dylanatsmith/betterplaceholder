@@ -1,5 +1,5 @@
 .button {
-	background:    $medium;
+	background:    $accent;
 	border: 	   0;
 	border-radius: 0.125rem;
 	color:         $white;
@@ -7,11 +7,18 @@
 	margin-right:  0.75rem;
 	outline:       0;
 	padding:       0.5rem 0.75rem;
+
+	&:hover {
+		background: darken($accent, 20%);
+	}
 }
 
 .button--reset {
-	background: $light;
-	color:      $black;
+	background: $warning;
+
+	&:hover {
+		background: darken($warning, 20%);
+	}
 }
 
 .button--disabled {

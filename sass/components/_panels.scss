@@ -1,6 +1,6 @@
 .panel {
 	background:    $white;
-	border:        0.0625rem solid $light;
+	border:        0.0625rem solid lighten($medium, 20%);
 	border-radius: 0.25rem;
 	padding:       1.0rem;
 }
@@ -17,7 +17,7 @@ hr {
 	background: $light;
 	border:     none;
 	height:     0.0625rem;
-	margin:     1.5rem 0;
+	margin:     1.0rem 0;
 }
 
 fieldset {
