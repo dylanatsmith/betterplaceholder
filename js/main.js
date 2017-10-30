@@ -29,6 +29,11 @@ $(function () {
     setTimeout(function () {
       $width.html($inputWidth.val());
     }, 0);
+    // Enable/disable inputs
+    if($width.html !== ''){ 
+      $( '.split' ).removeClass('input--disabled');
+      console.log('Width not empty');
+    };
   });
 })
 
