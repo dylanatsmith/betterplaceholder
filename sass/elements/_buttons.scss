@@ -1,3 +1,19 @@
+.button {
+	background:    $medium;
+	border: 	   0;
+	border-radius: 0.125rem;
+	color:         $white;
+	line-height:   1.0;
+	margin-right:  0.75rem;
+	outline:       0;
+	padding:       0.5rem 0.75rem;
+}
+
+.button--reset {
+	background: $light;
+	color:      $black;
+}
+
 .button--disabled {
 	opacity:        0.25;
 	pointer-events: none;
