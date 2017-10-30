@@ -10,7 +10,7 @@
   position: absolute;
   vertical-align: middle;
   background-position: -80px 0;
-  border: solid 1px #ccc;
+  border: 0;
   cursor: text;
   padding: 0;
   margin: 0;
@@ -23,6 +23,7 @@
   left: 0;
   right: 0;
   bottom: 0;
+  border-radius: 0.125rem;
 }
 
 .minicolors input[type=hidden] + .minicolors-swatch {
@@ -227,10 +228,11 @@
 
 /* Default theme */
 .minicolors-theme-default .minicolors-swatch {
-  top: 5px;
-  left: 5px;
-  width: 18px;
-  height: 18px;
+  top:    0.25rem;
+  left:   0.25rem;
+  width:  1.25rem;
+  height: 1.25rem;
+  border-radius: 0.125rem;
 }
 .minicolors-theme-default .minicolors-swatches .minicolors-swatch {
   margin-bottom: 2px;
@@ -244,12 +246,12 @@
   right: 5px;
 }
 .minicolors-theme-default.minicolors {
-  width: auto;
+  width:   50%;
   display: inline-block;
 }
 .minicolors-theme-default .minicolors-input {
-  width: auto;
-  display: inline-block;
+  width:        100%;
+  display:      inline-block;
   padding-left: 2.0rem;
 }
 .minicolors-theme-default.minicolors-position-right .minicolors-input {
