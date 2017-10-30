@@ -9,18 +9,6 @@ body {
     width:  100%;
 }
 
-::-moz-selection {
-    background:  $black;
-    color:       $white;
-    text-shadow: none;
-}
-
-::selection {
-    background:  $black;
-    color:       $white;
-    text-shadow: none;
-}
-
 audio,
 canvas,
 iframe,
