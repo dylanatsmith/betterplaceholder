@@ -29,11 +29,6 @@ $(function () {
     setTimeout(function () {
       $width.html($inputWidth.val());
     }, 0);
-    // Enable/disable inputs
-    if($width.html !== ''){ 
-      $( '.split' ).removeClass('input--disabled');
-      console.log('Width not empty');
-    };
   });
 })
 
@@ -122,7 +117,7 @@ $('.button--reset').click(function() {
   // Clear all the variable spans
   $( '#width, #height, #bgcolour, #textcolour, #filetype, #string' ).empty();
   // Reset colours to defaults
-  $( '#input-bgcolour' ).val( '#ccc' );
+  $( '#input-bgcolour' ).val( '#cccccc' );
   $( '#input-textcolour' ).val( '#969696' );
   // Reset colour swatches
   $( 'label[for=input-bgcolour' ).find( '.minicolors-swatch-color' ).attr( 'style', 'background-color: rgb(204, 204, 204); opacity: 1;' );
