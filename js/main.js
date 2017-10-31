@@ -115,8 +115,12 @@ $('.button--reset').click(function() {
     .removeAttr('checked')
     .removeAttr('selected');
   // Clear all the variable spans
-  $( '#width, #height, #bgcolour, #textcolour, #filetype, #string' ).empty();
-  // Reset colours to defaults
+  $( '#bgcolour, #textcolour, #filetype, #string' ).empty();
+  $( '#width' ).text( '600');
+  $( '#height' ).text( 'x400');
+  // Reset dimensions and colours to defaults
+  $( '#input-width' ).val( '600' );
+  $( '#input-height' ).val( '400' );
   $( '#input-bgcolour' ).val( '#cccccc' );
   $( '#input-textcolour' ).val( '#969696' );
   // Reset colour swatches
@@ -125,7 +129,7 @@ $('.button--reset').click(function() {
   // Remove existing preview image
   $( '.preview-image' ).empty();
   // Add new image with new URL
-  $( '.preview-image' ).append( '<img src="https://via.placeholder.com/400x400">' );
+  $( '.preview-image' ).append( '<img src="https://via.placeholder.com/600x400">' );
   // Disable another click on reset, preview, and copy buttons
   $( '.button--preview, .button--reset, .button--copy:not(.preview-image)' ).addClass( 'button--disabled' );
 });
