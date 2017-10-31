@@ -32,6 +32,10 @@ fieldset {
 
 .panel--output {
 	margin-bottom: 2.0rem;
+
+	@media only screen and (max-width: 767px) {
+		margin-top: 2.0rem;
+	}
 }
 
 .created-url {
