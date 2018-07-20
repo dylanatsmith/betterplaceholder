@@ -59,11 +59,13 @@ $( '.colour-swap' ).click(function() {
 
 // Updates value for string every time a key is entered in that field
 $inputString.on('change keydown paste', function () {
-  // Change spaces for plus signs
-  var str = $inputString.val();
-  var newStr = '?text=' + str.replace( /\s+/g, '+' );
-  // Display string in URL
-  $string.html( newStr );
+  setTimeout(function () {
+    // Change spaces for plus signs
+    var str = $inputString.val();
+    var newStr = '?text=' + str.replace( /\s+/g, '+' );
+    // Display string in URL
+    $string.html( newStr );
+  }, 0);
 });
 
 // Updates value for filetype every time a new radio button is clicked
