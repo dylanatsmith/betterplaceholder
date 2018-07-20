@@ -1,7 +1,9 @@
-$white:  #fff;
-$light:  #F9F5F1;
-$medium: #b6b4af;
-$black:  #251C25;
+$base:   #222;
+
+$black:  $base;
+$medium: lighten( $base, 50% );
+$light:  lighten( $base, 80% );
+$white:  lighten( $base, 85% );
 
 $accent:  #5285BF;
 $warning: #EE5568;
