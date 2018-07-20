@@ -16,6 +16,11 @@ var $string          = $('#string');
 var $inputString     = $('#input-string');
 var $filetype        = $('#filetype');
 
+function updateColours() {
+  $bgcolour.html( '/' + $inputBgcolour.val().replace( '#', '' ) );
+  $textcolour.html('/' + $inputTextcolour.val().replace( '#', '' ) );
+}
+
 // Reenable preview and reset buttons when any input changes
 $( 'input' ).on( 'change keyup paste', function () {
   $( '.button--preview, .button--reset, .button--copy' ).removeClass( 'button--disabled' );
@@ -33,14 +38,12 @@ $inputHeight.on( 'change keyup paste', function () {
 
 // Updates value for background colour every time a key is entered in that field
 $inputBgcolour.on('change keydown paste', function () {
-  $bgcolour.html( '/' + $inputBgcolour.val().replace( '#', '' ) );
-  $textcolour.html('/' + $inputTextcolour.val().replace( '#', '' ) );
+  updateColours();
 });
 
 // Updates value for text colour every time a key is entered in that field
 $inputTextcolour.on('change keydown paste', function () {
-  $bgcolour.html( '/' + $inputBgcolour.val().replace( '#', '' ) );
-  $textcolour.html('/' + $inputTextcolour.val().replace( '#', '' ) );
+  updateColours();
 });
 
 // Switches background and text colours on click
@@ -49,8 +52,7 @@ $( '.colour-swap' ).click(function() {
   $($inputTextcolour).val($($inputBgcolour).val());
   $($inputBgcolour).val(temp);
   // Update URL with new values
-  $bgcolour.html( '/' + $inputBgcolour.val().replace( '#', '' ) );
-  $textcolour.html('/' + $inputTextcolour.val().replace( '#', '' ) );
+  updateColours();
   // Enable preview button
   $( '.button--preview, .button--reset, .button--copy' ).removeClass( 'button--disabled' );
 });
