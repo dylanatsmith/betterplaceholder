@@ -24,7 +24,6 @@
 		background:     $success;
 		border-radius:  0.125rem;
 		content:        'Copied';
-		height:         0;
 		opacity:        0;
 		padding:        0.5rem;
 		pointer-events: none;
@@ -38,18 +37,9 @@
 
 	&.button--copied {
 		&::after {
-			animation: copiedAnimation 2.0s ease-in-out;
-			height:    auto;
+			opacity: 1;
 		}
 	}
-
-}
-
-@keyframes copiedAnimation {
-	0%   { opacity: 0; }
-	20%  { opacity: 1; }
-	80%  { opacity: 1; }
-	100% { opacity: 0; }
 }
 
 .button--reset {
