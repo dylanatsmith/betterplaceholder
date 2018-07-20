@@ -1,5 +1,5 @@
 input {
-	border:        0.0625rem solid lighten($medium, 20%);
+	border:        0.0625rem solid lighten($medium,30%);
 	border-radius: 0.25rem;
 	padding:       0.25rem 0.375rem;
 }
@@ -16,7 +16,7 @@ fieldset {
 	}
 
 	label:not(:first-of-type) {
-		margin-left: 0.25rem;
+		margin-left: 0.5rem;
 	}
 
 	input {
