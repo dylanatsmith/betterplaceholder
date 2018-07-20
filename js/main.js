@@ -80,6 +80,9 @@ var clipboard = new Clipboard('.button--copy', {
 clipboard.on('success', function(e) {
   console.log(e);
   $( '.button--copy' ).addClass('button--copied');
+  setTimeout(function () { 
+    $('.button--copy').removeClass('button--copied');
+  }, 2000);
 });
 clipboard.on('error', function(e) {
   console.log(e);
