@@ -11,6 +11,10 @@
 	&:hover {
 		background: darken($accent, 20%);
 	}
+
+	&:active {
+		background: $accent;
+	}
 }
 
 .button--reset {
@@ -18,6 +22,10 @@
 
 	&:hover {
 		background: darken($warning, 20%);
+	}
+
+	&:active {
+		background: $warning;
 	}
 }
 
