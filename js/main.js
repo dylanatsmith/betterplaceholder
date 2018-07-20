@@ -79,6 +79,7 @@ var clipboard = new Clipboard('.button--copy', {
 });
 clipboard.on('success', function(e) {
   console.log(e);
+  $( '.copied' ).fadeIn();
 });
 clipboard.on('error', function(e) {
   console.log(e);
@@ -97,7 +98,7 @@ $( '.button--preview' ).click(function() {
   $( '.button--preview' ).addClass( 'button--disabled' );
 });
 
-// Button to clear all values
+// Reset button
 $('.button--reset').click(function() {
   $(':input','form')
     .not(':button, :submit, :reset, :hidden')
