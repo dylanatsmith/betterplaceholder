@@ -10,3 +10,31 @@ h1 {
 h1 + span {
 	margin-left: 0.25rem;
 }
+
+.header {
+	display: flex;
+	justify-content: space-between;
+}
+
+@media screen and (max-width: 499px) {
+	.header__left {
+		span {
+			display:     block;
+			margin-left: 0;
+			margin-top:  0.25rem;
+		}
+	}	
+}
+
+.header__right {
+	text-align: right;
+
+	a {
+		color: $medium;
+		text-decoration: none;
+
+		&:hover {
+			color: $black;
+		}
+	}
+}
