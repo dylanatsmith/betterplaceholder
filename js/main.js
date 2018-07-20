@@ -79,7 +79,7 @@ var clipboard = new Clipboard('.button--copy', {
 });
 clipboard.on('success', function(e) {
   console.log(e);
-  $( '.copied' ).fadeIn();
+  $( '.button--copy' ).addClass('button--copied');
 });
 clipboard.on('error', function(e) {
   console.log(e);
