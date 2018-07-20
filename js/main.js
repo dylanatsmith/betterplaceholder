@@ -17,41 +17,38 @@ var $inputString     = $('#input-string');
 var $filetype        = $('#filetype');
 
 // Reenable preview and reset buttons when any input changes
-$( 'input' ).on( 'change keydown paste', function () {
+$( 'input' ).on( 'change keyup paste', function () {
   $( '.button--preview, .button--reset, .button--copy' ).removeClass( 'button--disabled' );
 });
 
 // Updates value for width every time a key is entered in that field
-$inputWidth.on( 'change keydown paste', function () {
-  setTimeout(function () {
-    $width.html($inputWidth.val());
-  }, 0);
+$inputWidth.on( 'change keyup paste', function () {
+  $width.html($inputWidth.val());
 });
 
 // Updates value for height every time a key is entered in that field
-$inputHeight.on( 'change keydown paste', function () {
-  setTimeout(function () {
-    $height.html('x' + $inputHeight.val());
-  }, 0);
+$inputHeight.on( 'change keyup paste', function () {
+  $height.html('x' + $inputHeight.val());
 });
 
 // Updates value for background colour every time a key is entered in that field
-$inputBgcolour.on('change keydown paste', function () {
-  setTimeout(function () {
-    $bgcolour.html( '/' + $inputBgcolour.val().replace( '#', '' ) );
-    $textcolour.html('/' + $inputTextcolour.val().replace( '#', '' ) );
-  }, 0);
+$inputBgcolour.bind('input', function () {
+  $bgcolour.html( '/' + $inputBgcolour.val().replace( '#', '' ) );
+  $textcolour.html('/' + $inputTextcolour.val().replace( '#', '' ) );
 });
-
 
 // Updates value for text colour every time a key is entered in that field
-$inputTextcolour.on('change keydown paste', function () {
-  setTimeout(function () {
-    $bgcolour.html( '/' + $inputBgcolour.val().replace( '#', '' ) );
-    $textcolour.html('/' + $inputTextcolour.val().replace( '#', '' ) );
-  }, 0);
+$inputTextcolour.bind('input', function () {
+  $bgcolour.html( '/' + $inputBgcolour.val().replace( '#', '' ) );
+  $textcolour.html('/' + $inputTextcolour.val().replace( '#', '' ) );
 });
 
+// Switches background and text colours on click
+$( '.colour-swap' ).click(function() {
+  var temp = $($inputTextcolour).val();
+  $($inputTextcolour).val($($inputBgcolour).val());
+  $($inputBgcolour).val(temp);
+});
 
 // Updates value for string every time a key is entered in that field
 $inputString.on('change keydown paste', function () {
