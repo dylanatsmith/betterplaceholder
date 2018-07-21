@@ -70,7 +70,7 @@ $inputString.on('change keydown paste', function () {
 
 // Updates value for filetype every time a new radio button is clicked
 $('input[name=filetype]').on('change', function () {
-    $filetype.html( '.' + $('input[name=filetype]:checked').val() );
+  $filetype.html( '.' + $('input[name=filetype]:checked').val() );
 });
 
 // Instantiate clipboard.js
