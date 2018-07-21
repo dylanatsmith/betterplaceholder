@@ -72,6 +72,10 @@
 		background:   $warning;
 		border-color: $warning;
 		color:        $white;
+
+		.reset {
+			animation: resetSpin 0.4s;
+		}
 	}
 
 	&:active {
@@ -91,6 +95,7 @@
 }
 
 .button__icon	{
+	display: inline-block;
 	height: 0.875rem;
 	position: relative;
 }
@@ -102,7 +107,17 @@
 
 .eye__inner {
 	position:   absolute;
-	top:        0.3125rem;
+	top:        0.1875rem;
 	left:       0.25rem;
 	transition: $transition-all-short;
+}
+
+.reset {
+	position: relative;
+	top: -0.0625rem;
+}
+
+@keyframes resetSpin {
+	0%   { transform: rotate(    0deg ) }
+	100% { transform: rotate( -360deg ) }
 }
