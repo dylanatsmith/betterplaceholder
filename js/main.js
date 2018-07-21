@@ -48,9 +48,13 @@ $inputTextcolour.on('change keydown paste', function () {
 
 // Switches background and text colours on click
 $( '.colour-swap' ).click(function() {
-  var temp = $($inputTextcolour).val();
+  // Change values in puts
+  var tempColour = $($inputTextcolour).val();
   $($inputTextcolour).val($($inputBgcolour).val());
-  $($inputBgcolour).val(temp);
+  $($inputBgcolour).val(tempColour);
+  // Change swatch colours
+  $( '#input-textcolour + .minicolors-swatch .minicolors-swatch-color').attr( 'style', 'background-color:' + $inputTextcolour.val() );
+  $( '#input-bgcolour + .minicolors-swatch .minicolors-swatch-color').attr( 'style', 'background-color:' + $inputBgcolour.val() );
   // Update URL with new values
   updateColours();
   // Enable preview button
