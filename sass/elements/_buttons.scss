@@ -16,16 +16,12 @@
 	transition:     $transition-all-short;
 
 	&:hover {
-		/* background:   $accent; */
-		/* border-color: $accent; */
-		/* color:        $white; */
-
 		background:   $light;
 	}
 
 	&:active {
-		background:   darken($accent, 20%);
-		border-color: darken($accent, 20%);
+		background:   darken($light, 10%);
+		border-color: darken($light, 10%);
 	}
 }
 
@@ -63,6 +59,31 @@
 			opacity: 1;
 		}
 	}
+
+	&:hover {
+		.square--one {
+			top: 0.25rem;
+		}
+
+		.square--two {
+			background: $light;
+			top: 0;
+
+			&::before {
+				border-color: $light;
+			}
+		}
+	}
+
+	&:active {
+		.square--two {
+			background: darken($light, 10%);
+
+			&::before {
+				border-color: darken($light, 10%);
+			}
+		}
+	}
 }
 
 .button--reset {
@@ -96,8 +117,13 @@
 
 .button__icon	{
 	display: inline-block;
-	height: 0.875rem;
 	position: relative;
+
+	.button--copy & {
+		margin-right: 0.125rem;
+		top:   -0.125rem;
+		width: 0.875rem;
+	}
 }
 
 .eye__outer {
@@ -120,4 +146,38 @@
 @keyframes resetSpin {
 	0%   { transform: rotate(    0deg ) }
 	100% { transform: rotate( -360deg ) }
+}
+
+
+.square {
+  border: 2px solid $black;
+  border-radius: 0.125rem;
+  box-sizing: content-box;
+  height: 0.375rem;
+  width:  0.375rem;
+  position: absolute;
+  transition: $transition-all-short;
+}
+
+.square--one {
+  top:  0;
+  left: 0;
+  position: absolute;
+}
+
+.square--two {
+  top:        0.25rem;
+  left:       0.25rem;
+  background: #fff;
+  position:   relative;
+  
+  &::before {
+    border:  1px solid #fff;
+    content: '';
+    position: absolute;
+    height:  0.75rem;
+    width:   0.75rem;
+    top:  -3px;
+    left: -3px;
+  }
 }
