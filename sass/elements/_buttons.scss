@@ -7,21 +7,33 @@
 	font-size:      $font-size-sm;
 	font-weight:    $font-weight-bold;
 	line-height:    1.0;
+	line-height:    1.0;
 	margin-right:   0.75rem;
 	outline:        0;
 	padding:        0.5rem 0.75rem;
+	position:       relative;
 	text-transform: uppercase;
 	transition:     $transition-all-short;
 
 	&:hover {
-		background:   $accent;
-		border-color: $accent;
-		color:        $white;
+		/* background:   $accent; */
+		/* border-color: $accent; */
+		/* color:        $white; */
+
+		background:   $light;
 	}
 
 	&:active {
 		background:   darken($accent, 20%);
 		border-color: darken($accent, 20%);
+	}
+}
+
+.button--preview {
+	&:hover {
+		.eye__inner {
+			left: 0.375rem;
+		}
 	}
 }
 
@@ -71,4 +83,26 @@
 .button--disabled {
 	opacity:        0.25;
 	pointer-events: none;
+}
+
+
+.button__text {
+
+}
+
+.button__icon	{
+	height: 0.875rem;
+	position: relative;
+}
+
+.eye__outer {
+	position: relative;
+	top:      -0.0625rem;
+}
+
+.eye__inner {
+	position:   absolute;
+	top:        0.3125rem;
+	left:       0.25rem;
+	transition: $transition-all-short;
 }
