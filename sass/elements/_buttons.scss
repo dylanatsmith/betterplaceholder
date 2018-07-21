@@ -1,19 +1,27 @@
 .button {
-	background:    $accent;
-	border: 	   0;
-	border-radius: 0.125rem;
-	color:         $white;
-	line-height:   1.0;
-	margin-right:  0.75rem;
-	outline:       0;
-	padding:       0.5rem 0.75rem;
+	background:     $white;
+	border: 	      1px solid $light;
+	border-radius:  0.1875rem;
+	box-shadow:     0 4px 2px -3px rgba(0,0,0,0.1);
+	color:          $black;
+	font-size:      $font-size-sm;
+	font-weight:    $font-weight-bold;
+	line-height:    1.0;
+	margin-right:   0.75rem;
+	outline:        0;
+	padding:        0.5rem 0.75rem;
+	text-transform: uppercase;
+	transition:     $transition-all-short;
 
 	&:hover {
-		background: darken($accent, 20%);
+		background:   $accent;
+		border-color: $accent;
+		color:        $white;
 	}
 
 	&:active {
-		background: $accent;
+		background:   darken($accent, 20%);
+		border-color: darken($accent, 20%);
 	}
 }
 
@@ -23,6 +31,7 @@
 	&::after {
 		background:     $success;
 		border-radius:  0.125rem;
+		color:          $white;
 		content:        'Copied';
 		opacity:        0;
 		padding:        0.5rem;
@@ -36,6 +45,8 @@
 	}
 
 	&.button--copied {
+		border-color: $success;
+
 		&::after {
 			opacity: 1;
 		}
@@ -43,14 +54,17 @@
 }
 
 .button--reset {
-	background: $warning;
+	color: $warning;
 
 	&:hover {
-		background: darken($warning, 20%);
+		background:   $warning;
+		border-color: $warning;
+		color:        $white;
 	}
 
 	&:active {
-		background: $warning;
+		background:   darken($warning, 20%);
+		border-color: darken($warning, 20%);
 	}
 }
 
