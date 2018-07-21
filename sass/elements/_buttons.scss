@@ -117,9 +117,11 @@
 
 .button__icon	{
 	display: inline-block;
+	height:  0.875rem;
 	position: relative;
 
 	.button--copy & {
+		height: 0.625rem;
 		margin-right: 0.125rem;
 		top:   -0.125rem;
 		width: 0.875rem;
