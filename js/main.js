@@ -36,7 +36,7 @@ function updateColours() {
 
 // Reenable preview and reset buttons when any input changes
 $( 'input' ).on( 'change keyup paste', function () {
-  $( '.button--preview, .button--reset, .button--copy' ).removeClass( 'button--disabled' );
+  $( '.button--preview, .button--reset, .js-copy-button' ).removeClass( 'button--disabled' );
 });
 
 // Updates value for width every time a key is entered in that field
@@ -76,16 +76,16 @@ $('input[name=filetype]').on('change', function () {
 });
 
 // Instantiate clipboard.js
-var clipboard = new Clipboard('.button--copy', {
+var clipboard = new Clipboard('.js-copy-button', {
   text: function() {
     return $('.created-url').text();
   }
 });
 clipboard.on('success', function(e) {
   console.log(e);
-  $( '.button--copy' ).addClass('button--copied');
+  $( '.js-copy-button' ).addClass('button--copied');
   setTimeout(function () {
-    $('.button--copy').removeClass('button--copied');
+    $('.js-copy-button').removeClass('button--copied');
   }, 2000);
 });
 clipboard.on('error', function(e) {
@@ -128,8 +128,8 @@ $('.button--reset').click(function() {
   $( '.preview-image' ).empty();
   // Add new image with new URL
   $( '.preview-image' ).append( '<img src="https://via.placeholder.com/600x400">' );
-  // Disable another click on reset, preview, and copy buttons
-  $( '.button--preview, .button--reset, .button--copy:not(.preview-image)' ).addClass( 'button--disabled' );
+  // Disable another click on reset and preview buttons
+  $( '.button--preview, .button--reset' ).addClass( 'button--disabled' );
 });
 
 }); // Close doc ready
