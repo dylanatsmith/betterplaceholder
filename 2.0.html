@@ -38,12 +38,12 @@
   <meta name="twitter:image" content="">
 </head>
 
-<body class="m-0 d-flex color-fg-default color-bg-subtle">
+<body class="m-0 d-flex color-fg-default color-bg-subtle f5">
 
   <div class="sidebar p-4">
 
     <header>
-      <h1 class="f4 text-bold">Better Placeholder</h1>
+      <h1 class="f5 text-bold">Better Placeholder</h1>
     </header>
 
     <main>
@@ -52,14 +52,15 @@
         <div class="color-bg-default border rounded-2 p-3 mt-3">
           <div class="split">
             <label for="input-width">Width</label>
-            <input name="input-width" id="input-width" type="number" value="600" min="1">
+            <input class="form-control" name="input-width" id="input-width" type="number" value="600" min="1">
           </div>
 
           <div class="split">
             <label for="input-height">Height</label>
-            <input name="input-height" id="input-height" type="number" value="400" min="1">
+            <input class="form-control" name="input-height" id="input-height" type="number" value="600" min="1">
           </div>
 
+          <!--
           <div class="section">
             <span class="colour-swap">
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 14 12">
@@ -67,19 +68,20 @@
               </svg>
             </span>
           </div>
+          -->
 
           <div class="split">
             <label for="input-bgcolour">Background</label>
-            <input name="input-bgcolour" id="input-bgcolour" class="input--colour" type="text" value="#ccc">
+            <input class="form-control input--colour" name="input-bgcolour" id="input-bgcolour" type="text" value="#ccc">
           </div>
 
           <div class="split">
             <label for="input-textcolour">Text</label>
-            <input name="input-textcolour" id="input-textcolour" class="input--colour" type="text" value="#969696">
+            <input class="form-control input--colour" name="input-textcolour" id="input-textcolour" type="text" value="#969696">
           </div>
 
-          <label for="input-string">Custom Text</label>
-          <input name="input-string" id="input-string" type="text">
+          <label for="input-string">Custom text</label>
+          <input class="form-control" name="input-string" id="input-string" type="text" placeholder="Optional string">
 
           <fieldset>
             <label for="input-filetype-png">
@@ -101,10 +103,12 @@
       </form>
 
       <div class="color-bg-default border rounded-2 p-3 mt-3">
-        <span class="created-url">https://via.placeholder.com/<span id="width">600</span><span id="height">x400</span><span
-            id="bgcolour"></span><span id="textcolour"></span><span id="filetype"></span><span id="string"></span></span>
+        <div class="created-url border color-border-muted rounded-1 color-bg-subtle p-2 text-mono f6">
+          https://via.placeholder.com/<span id="width">600</span><span id="height">x400</span><span
+            id="bgcolour"></span><span id="textcolour"></span><span id="filetype"></span><span id="string"></span>
+        </div>
 
-        <div class="d-flex flex-wrap">
+        <div class="d-flex flex-wrap mt-2">
           <button class="btn btn-primary    button--copy button--disabled" type="button">
             Copy URL
 
@@ -123,7 +127,7 @@
     </main>
 
     <footer class="mt-3">
-      <p class="f5 color-fg-subtle">
+      <p class="f6 color-fg-subtle">
         Created and maintained by <a href="https://dylanatsmith.com">Dylan Smith.</a>
       </p>
     </footer>

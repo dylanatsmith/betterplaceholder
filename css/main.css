@@ -98,27 +98,9 @@ img {
   	} */
 }
 
-input {
-  border: 0.0625rem solid #eeeeee;
-  border-radius: 0.25rem;
-  outline: none;
-  padding: 0.25rem 0.375rem;
-}
-
 .input--disabled {
   opacity: 0.25;
   pointer-events: none;
-}
-
-fieldset label {
-  white-space: nowrap;
-}
-fieldset label:not(:first-of-type) {
-  margin-left: 0.5rem;
-}
-fieldset input {
-  position: relative;
-  top: -0.125rem;
 }
 
 #input-string {
