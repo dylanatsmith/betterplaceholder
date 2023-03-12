@@ -1,15 +1,14 @@
-@charset "UTF-8";
 /* Global variables */
 /* Base styles */
-html {
+html,
+body {
   height: 100%;
   font-size: 16px;
 }
 
 body {
-  margin: 0 auto;
-  padding-bottom: 2rem;
-  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 audio,
@@ -25,6 +24,23 @@ img {
   max-width: 100%;
 }
 
+.sidebar {
+  flex-basis: 20rem;
+  flex-shrink: 0;
+  overflow-y: auto;
+}
+
+.preview {
+  display: grid;
+  flex: 1;
+  place-items: center;
+}
+
+.preview-image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 /* Typography */
 /* Font family stacks */
 /* Type scale
@@ -37,81 +53,6 @@ img {
 /* 32px */
 /* 40px */
 /* Font weights */
-html {
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-feature-settings: "liga" 1;
-  -moz-font-feature-settings: "liga" 1;
-  -ms-font-feature-settings: "liga" 1;
-  -o-font-feature-settings: "liga" 1;
-  font-feature-settings: "liga" 1;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  color: #222;
-}
-
-h1,
-h2,
-h3,
-h4,
-p,
-a {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-h1 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 3.5625rem;
-  line-height: 1;
-  font-weight: 700;
-  color: #fbfbfb;
-}
-
-h2 {
-  font-size: 2.6825rem;
-  line-height: 1;
-  font-weight: 400;
-}
-
-h3 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 2rem;
-  line-height: 1;
-  font-weight: 700;
-}
-
-h4 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 1.125rem;
-  line-height: 1.7rem;
-  font-weight: 700;
-}
-
-p {
-  font-size: 1.125rem;
-  line-height: 1.7;
-}
-
-ul {
-  list-style: none;
-  margin-left: 1rem;
-  padding-left: 0;
-}
-
-li {
-  font-size: 1rem;
-  line-height: 1.5;
-  padding-left: 1rem;
-  text-indent: -1rem;
-}
-
-li:before {
-  content: "•";
-  padding-right: 0.5rem;
-  color: #222;
-}
-
 /* Components */
 .colour-swap {
   color: #a2a2a2;
@@ -133,89 +74,9 @@ li:before {
 }
 
 /* Elements */
-.button {
-  background: #fff;
-  border: 1px solid #eeeeee;
-  border-radius: 0.1875rem;
-  box-shadow: 0 4px 2px -3px rgba(0, 0, 0, 0.1);
-  color: #222;
-  font-size: 0.875rem;
-  font-weight: 700;
-  line-height: 1;
-  line-height: 1;
-  margin-right: 0.75rem;
-  outline: 0;
-  padding: 0.5rem 0.75rem;
-  position: relative;
-  text-transform: uppercase;
-  transition: all 0.1s ease;
-}
-.button:hover {
-  background: #eeeeee;
-}
-.button:active {
-  background: #d5d5d5;
-  border-color: #d5d5d5;
-}
-
-.button--copy {
-  position: relative;
-}
-.button--copy::after {
-  background: #52BFA3;
-  border-radius: 0.125rem;
-  color: #fbfbfb;
-  content: "Copied";
-  opacity: 0;
-  padding: 0.5rem;
-  pointer-events: none;
-  position: absolute;
-  transition: all 0.3s ease;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-}
-.button--copy.button--copied {
-  border-color: #52BFA3;
-}
-.button--copy.button--copied::after {
-  opacity: 1;
-}
-
-.button--reset {
-  color: #EE5568;
-}
-.button--reset:hover {
-  background: #EE5568;
-  border-color: #EE5568;
-  color: #fbfbfb;
-}
-.button--reset:active {
-  background: #c9142b;
-  border-color: #c9142b;
-}
-
 .button--disabled {
-  opacity: 0.25;
+  opacity: 0.5;
   pointer-events: none;
-}
-
-.button__icon {
-  display: inline-block;
-  height: 0.875rem;
-  position: relative;
-}
-.button--copy .button__icon {
-  height: 0.625rem;
-  margin-right: 0.125rem;
-  top: -0.125rem;
-  width: 0.875rem;
-}
-
-.reset {
-  position: relative;
-  top: -0.0625rem;
 }
 
 .preview-image {

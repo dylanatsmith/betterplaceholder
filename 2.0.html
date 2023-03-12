@@ -18,6 +18,7 @@
   <meta name="theme-color" content="#cccccc">
 
   <!-- Styles and scripts -->
+  <link href="https://unpkg.com/@primer/css@^20.2.4/dist/primer.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/main.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="js/main-min.js"></script>
@@ -37,18 +38,18 @@
   <meta name="twitter:image" content="">
 </head>
 
-<body>
+<body class="m-0 d-flex color-fg-default color-bg-subtle">
 
-  <div class="sidebar">
+  <div class="sidebar p-4">
 
     <header>
-      <h1>Better Placeholder</h1>
+      <h1 class="f4 text-bold">Better Placeholder</h1>
     </header>
 
     <main>
       <form action="javascript:myFunction(); return false;">
 
-        <div class="panel">
+        <div class="color-bg-default border rounded-2 p-3 mt-3">
           <div class="split">
             <label for="input-width">Width</label>
             <input name="input-width" id="input-width" type="number" value="600" min="1">
@@ -99,33 +100,45 @@
 
       </form>
 
-      <div class="panel">
+      <div class="color-bg-default border rounded-2 p-3 mt-3">
         <span class="created-url">https://via.placeholder.com/<span id="width">600</span><span id="height">x400</span><span
             id="bgcolour"></span><span id="textcolour"></span><span id="filetype"></span><span id="string"></span></span>
 
-        <button class="button button--preview button--disabled">
-          <span class="button__text">Update Preview</span>
-        </button>
-        <button class="button button--copy button--disabled">
-          <span class="button__text">Copy URL</span>
-        </button>
-        <button class="button button--reset button--disabled">
-          <span class="button__text">Reset</span>
-        </button>
+        <div class="d-flex flex-wrap">
+          <button class="btn btn-primary    button--copy button--disabled" type="button">
+            Copy URL
+
+          </button>
+
+          <button class="btn    button--preview button--disabled" type="button">
+            Update preview
+          </button>
+
+          <button class="btn btn-danger   button--reset button--disabled" type="button">
+            Reset
+          </button>
+        </div>
       </div>
+
     </main>
+
+    <footer class="mt-3">
+      <p class="f5 color-fg-subtle">
+        Created and maintained by <a href="https://dylanatsmith.com">Dylan Smith.</a>
+      </p>
+    </footer>
 
   </div>
 
-  <aside class="preview-image">
-    <img src="https://via.placeholder.com/600x400" alt="Preview of placeholder image">
+  <aside class="preview p-4">
+    <div class="preview-image">
+      <img
+        src="https://via.placeholder.com/600x400"
+        alt="Preview of placeholder image"
+        class="border rounded-2"
+      >
+    </div>
   </aside>
-
-  <footer>
-    <p>
-      Created and maintained by <a href="https://dylanatsmith.com">Dylan Smith</a>
-    </p>
-  </footer>
 
 </body>
 </html>
