@@ -1,0 +1,22 @@
+html,
+body {
+  height: 100%;
+  font-size: 16px;
+}
+
+.sidebar {
+  // 544 comes from Primer’s sm breakpoint
+  @media screen and (min-width: 544px) {
+    flex-basis: 20rem;
+  }
+}
+
+.button--disabled {
+	opacity:        0.5;
+	pointer-events: none;
+}
+
+.input--disabled {
+	opacity: 0.5;
+	pointer-events: none;
+}
