@@ -34,9 +34,9 @@ function updateColours() {
   $textcolour.html('/' + $inputTextcolour.val().replace( '#', '' ) );
 }
 
-// Reenable preview and reset buttons when any input changes
+// Reenable preview reset buttons when any input changes
 $( 'input, select' ).on( 'change keyup paste', function () {
-  $( '.js-preview-button, .js-reset-button, .js-copy-button' ).removeClass( 'button--disabled' );
+  $('.js-preview-button, .js-reset-button').removeClass('button--disabled');
 });
 
 // Updates value for width every time a key is entered in that field
@@ -82,10 +82,9 @@ var clipboard = new Clipboard('.js-copy-button', {
   }
 });
 clipboard.on('success', function(e) {
-  console.log(e);
   $('.js-copy-confirmation').removeClass('v-hidden');
   setTimeout(function () {
-    $( '.js-copy-confirmation' ).addClass('v-hidden');
+    $('.js-copy-confirmation').addClass('v-hidden');
   }, 2500);
 });
 clipboard.on('error', function(e) {
@@ -93,16 +92,16 @@ clipboard.on('error', function(e) {
 });
 
 // Instantiate jQuery minicolors
-$( '.input--colour' ).minicolors();
+$('.input--colour').minicolors();
 
 // Preview button
-$( '.js-preview-button' ).click(function() {
+$('.js-preview-button').click(function() {
   // Remove existing preview image
-  $( '.preview-image' ).empty();
+  $('.preview-image').empty();
   // Add new image with new URL
-  $( '.preview-image' ).append( '<img src="' + $( '.created-url' ).text() + '">' );
+  $('.preview-image').append('<img src="' + $( '.created-url' ).text() + '">');
   // Disable another click
-  $( '.js-preview-button' ).addClass( 'button--disabled' );
+  $('.js-preview-button').addClass('button--disabled');
 });
 
 // Reset button
@@ -116,7 +115,7 @@ $('.js-reset-button').click(function() {
   $( '#bgcolour, #textcolour, #filetype, #string' ).empty();
   $( '#width' ).text( '600');
   $( '#height' ).text( 'x400');
-  // Reset dimensions and colours to defaults
+  // Reset dimensions, colours, string, and filetype to defaults
   $( '#input-width' ).val( '600' );
   $( '#input-height' ).val( '400' );
   $( '#input-bgcolour' ).val( '#cccccc' );
@@ -124,14 +123,14 @@ $('.js-reset-button').click(function() {
   $( '#input-string' ).val( '' );
   $( '#input-filetype' ).val( 'png' );
   // Reset colour swatches
-  $( '#input-bgcolour' ).parent().find( '.minicolors-swatch-color' ).attr( 'style', 'background-color: rgb(204, 204, 204); opacity: 1;' );
-  $( '#input-textcolour' ).parent().find( '.minicolors-swatch-color' ).attr( 'style', 'background-color: rgb(150, 150, 150); opacity: 1;' );
+  $('#input-bgcolour').parent().find( '.minicolors-swatch-color' ).attr('style', 'background-color: rgb(204, 204, 204); opacity: 1;');
+  $('#input-textcolour').parent().find('.minicolors-swatch-color').attr('style', 'background-color: rgb(150, 150, 150); opacity: 1;');
   // Remove existing preview image
-  $( '.preview-image' ).empty();
+  $('.preview-image').empty();
   // Add new image with new URL
-  $( '.preview-image' ).append( '<img src="https://via.placeholder.com/600x400">' );
+  $('.preview-image' ).append('<img src="https://via.placeholder.com/600x400">');
   // Disable another click on reset and preview buttons
-  $( '.js-preview-button, .js-reset-button' ).addClass( 'button--disabled' );
+  $('.js-preview-button, .js-reset-button').addClass('button--disabled');
 });
 
 }); // Close doc ready
