@@ -28992,7 +28992,8 @@ body {
   font-size: 16px;
 }
 
-img {
+img,
+svg {
   max-width: 100%;
   vertical-align: middle;
 }
