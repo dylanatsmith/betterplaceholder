@@ -25,14 +25,6 @@
 	}
 }
 
-.button--preview {
-	&:hover {
-		.eye__inner {
-			left: 0.375rem;
-		}
-	}
-}
-
 .button--copy {
 	position: relative;
 
@@ -59,31 +51,6 @@
 			opacity: 1;
 		}
 	}
-
-	&:hover {
-		.square--one {
-			top: 0.25rem;
-		}
-
-		.square--two {
-			background: $light;
-			top: 0;
-
-			&::before {
-				border-color: $light;
-			}
-		}
-	}
-
-	&:active {
-		.square--two {
-			background: darken($light, 10%);
-
-			&::before {
-				border-color: darken($light, 10%);
-			}
-		}
-	}
 }
 
 .button--reset {
@@ -93,10 +60,6 @@
 		background:   $warning;
 		border-color: $warning;
 		color:        $white;
-
-		.reset {
-			animation: resetSpin 0.4s;
-		}
 	}
 
 	&:active {
@@ -108,11 +71,6 @@
 .button--disabled {
 	opacity:        0.25;
 	pointer-events: none;
-}
-
-
-.button__text {
-
 }
 
 .button__icon	{
@@ -128,58 +86,7 @@
 	}
 }
 
-.eye__outer {
-	position: relative;
-	top:      -0.0625rem;
-}
-
-.eye__inner {
-	position:   absolute;
-	top:        0.1875rem;
-	left:       0.25rem;
-	transition: $transition-all-short;
-}
-
 .reset {
 	position: relative;
 	top: -0.0625rem;
-}
-
-@keyframes resetSpin {
-	0%   { transform: rotate(    0deg ) }
-	100% { transform: rotate( -360deg ) }
-}
-
-
-.square {
-  border: 2px solid $black;
-  border-radius: 0.125rem;
-  box-sizing: content-box;
-  height: 0.375rem;
-  width:  0.375rem;
-  position: absolute;
-  transition: $transition-all-short;
-}
-
-.square--one {
-  top:  0;
-  left: 0;
-  position: absolute;
-}
-
-.square--two {
-  top:        0.25rem;
-  left:       0.25rem;
-  background: #fff;
-  position:   relative;
-  
-  &::before {
-    border:  1px solid #fff;
-    content: '';
-    position: absolute;
-    height:  0.75rem;
-    width:   0.75rem;
-    top:  -3px;
-    left: -3px;
-  }
 }
