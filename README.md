@@ -4,10 +4,15 @@ Quickly generate custom placeholder images for your design and development proje
 
 Builds on the via.placeholder.com service.
 
-
 ## Local development
 
-### SCSS compilation
+### SCSS
+
+Almost all of the styles come from [Primer CSS](https://primer.style/css) utility classes. There is some custom CSS that gets compiled with Sass along with the third-party dependencies.
 
 1. Install Sass globally: `npm install -g sass`
 2. Compile manually after changes: `sass scss/main.scss css/main.css`
+
+### JS
+
+V1 of this project was built on CodeKit but when I did V2 I just smashed everything into main.js.
