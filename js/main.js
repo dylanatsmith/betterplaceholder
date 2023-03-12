@@ -78,7 +78,7 @@ $('input[name=filetype]').on('change', function () {
 // Instantiate clipboard.js
 var clipboard = new Clipboard('.js-copy-button', {
   text: function() {
-    return $('.created-url').text();
+    return $('.created-url').text().trim();
   }
 });
 clipboard.on('success', function(e) {
