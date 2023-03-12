@@ -83,9 +83,9 @@ var clipboard = new Clipboard('.js-copy-button', {
 });
 clipboard.on('success', function(e) {
   console.log(e);
-  $( '.js-copy-button' ).addClass('button--copied');
+  $('.js-copy-confirmation').removeClass('v-hidden');
   setTimeout(function () {
-    $('.js-copy-button').removeClass('button--copied');
+    $( '.js-copy-confirmation' ).addClass('v-hidden');
   }, 2000);
 });
 clipboard.on('error', function(e) {

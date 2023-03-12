@@ -29013,4 +29013,14 @@ img {
   pointer-events: none;
 }
 
+.js-copy-confirmation {
+  transition: all 0.3s ease-in-out;
+  bottom: 0 !important;
+  opacity: 1 !important;
+}
+.js-copy-confirmation.v-hidden {
+  bottom: -2rem !important;
+  opacity: 0 !important;
+}
+
 /*# sourceMappingURL=main.css.map */
