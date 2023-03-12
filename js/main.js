@@ -35,7 +35,7 @@ function updateColours() {
 }
 
 // Reenable preview and reset buttons when any input changes
-$( 'input' ).on( 'change keyup paste', function () {
+$( 'input, select' ).on( 'change keyup paste', function () {
   $( '.js-preview-button, .js-reset-button, .js-copy-button' ).removeClass( 'button--disabled' );
 });
 
@@ -71,8 +71,8 @@ $inputString.on('change keydown paste', function () {
 });
 
 // Updates value for filetype every time a new radio button is clicked
-$('input[name=filetype]').on('change', function () {
-  $filetype.html( '.' + $('input[name=filetype]:checked').val() );
+$('#filetype-select').on('change', function () {
+  $filetype.html( '.' + $('#filetype-select').val() );
 });
 
 // Instantiate clipboard.js
@@ -121,6 +121,8 @@ $('.js-reset-button').click(function() {
   $( '#input-height' ).val( '400' );
   $( '#input-bgcolour' ).val( '#cccccc' );
   $( '#input-textcolour' ).val( '#969696' );
+  $( '#input-string' ).val( '' );
+  $( '#input-filetype' ).val( 'png' );
   // Reset colour swatches
   $( '#input-bgcolour' ).parent().find( '.minicolors-swatch-color' ).attr( 'style', 'background-color: rgb(204, 204, 204); opacity: 1;' );
   $( '#input-textcolour' ).parent().find( '.minicolors-swatch-color' ).attr( 'style', 'background-color: rgb(150, 150, 150); opacity: 1;' );

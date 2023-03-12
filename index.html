@@ -57,6 +57,16 @@
     <main class="flex-1">
       <div class="color-bg-default border rounded-2 p-3 mt-3">
         <div class="d-flex flex-items-center">
+          <label for="input-filetype" class="flex-1 mr-5">Filetype</label>
+          <select name="input-filetype" id="input-filetype" class="form-select flex-1" aria-label="Filetype">
+            <option value="png">PNG</option>
+            <option value="gif">GIF</option>
+            <option value="jpg">JPG</option>
+            <option value="jpeg">JPEG</option>
+          </select>
+        </div>
+
+        <div class="mt-3 d-flex flex-items-center">
           <label class="flex-1 mr-4" for="input-width">Width</label>
           <input class="flex-1 form-control width-full" name="input-width" id="input-width" type="number" value="600" min="1">
         </div>
@@ -67,12 +77,12 @@
         </div>
 
         <div class="mt-3 d-flex flex-items-center">
-          <label class="flex-1 mr-3" for="input-bgcolour">Background</label>
+          <label class="flex-1 mr-2" for="input-bgcolour">Background</label>
           <input class="flex-1 form-control input--colour" name="input-bgcolour" id="input-bgcolour" type="text" value="#ccc">
         </div>
 
         <div class="mt-2 d-flex flex-items-center">
-          <label class="flex-1 mr-3"for="input-textcolour">Text</label>
+          <label class="flex-1 mr-2" for="input-textcolour">Text</label>
           <input class="flex-1 form-control input--colour" name="input-textcolour" id="input-textcolour" type="text" value="#969696">
         </div>
 
@@ -80,24 +90,6 @@
           <label for="input-string">Custom text</label>
           <input class="form-control mt-1 width-full" name="input-string" id="input-string" type="text">
         </div>
-
-        <fieldset class="mt-3 d-flex">
-          <label for="input-filetype-png">
-            <input type="radio" value="png" name="filetype" id="input-filetype-png" checked> PNG
-          </label>
-
-          <label for="input-filetype-gif" class="ml-2">
-            <input type="radio" value="gif" name="filetype" id="input-filetype-gif"> GIF
-          </label>
-
-          <label for="input-filetype-jpg" class="ml-2">
-            <input type="radio" value="jpg" name="filetype" id="input-filetype-jpg"> JPG
-          </label>
-
-          <label for="input-filetype-jpeg" class="ml-2">
-            <input type="radio" value="jpeg" name="filetype" id="input-filetype-jpeg"> JPEG
-          </label>
-        </fieldset>
 
         <div class="mt-3">
           <button class="btn js-preview-button button--disabled" type="button">
@@ -134,7 +126,7 @@
   </div>
 
   <aside class="px-4 p-sm-4 flex-sm-1 d-flex flex-items-center flex-justify-center overflow-sm-y-auto">
-    <div class="preview-image border rounded-2 width-fit height-fit">
+    <div class="preview-image border rounded-2 width-fit height-fit overflow-hidden">
       <img
         src="https://via.placeholder.com/600x400"
         alt="Preview of placeholder image">
