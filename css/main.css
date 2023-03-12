@@ -29014,13 +29014,11 @@ img {
 }
 
 .js-copy-confirmation {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
   bottom: 0 !important;
-  opacity: 1 !important;
 }
 .js-copy-confirmation.v-hidden {
-  bottom: -2rem !important;
-  opacity: 0 !important;
+  bottom: -1.5rem !important;
 }
 
 /*# sourceMappingURL=main.css.map */

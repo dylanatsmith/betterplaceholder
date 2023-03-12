@@ -86,7 +86,7 @@ clipboard.on('success', function(e) {
   $('.js-copy-confirmation').removeClass('v-hidden');
   setTimeout(function () {
     $( '.js-copy-confirmation' ).addClass('v-hidden');
-  }, 2000);
+  }, 2500);
 });
 clipboard.on('error', function(e) {
   console.log(e);
