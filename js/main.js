@@ -36,7 +36,7 @@ function updateColours() {
 
 // Reenable preview and reset buttons when any input changes
 $( 'input' ).on( 'change keyup paste', function () {
-  $( '.button--preview, .button--reset, .js-copy-button' ).removeClass( 'button--disabled' );
+  $( '.js-preview-button, .button--reset, .js-copy-button' ).removeClass( 'button--disabled' );
 });
 
 // Updates value for width every time a key is entered in that field
@@ -96,13 +96,13 @@ clipboard.on('error', function(e) {
 $( '.input--colour' ).minicolors();
 
 // Preview button
-$( '.button--preview' ).click(function() {
+$( '.js-preview-button' ).click(function() {
   // Remove existing preview image
   $( '.preview-image' ).empty();
   // Add new image with new URL
   $( '.preview-image' ).append( '<img src="' + $( '.created-url' ).text() + '">' );
   // Disable another click
-  $( '.button--preview' ).addClass( 'button--disabled' );
+  $( '.js-preview-button' ).addClass( 'button--disabled' );
 });
 
 // Reset button
@@ -129,7 +129,7 @@ $('.button--reset').click(function() {
   // Add new image with new URL
   $( '.preview-image' ).append( '<img src="https://via.placeholder.com/600x400">' );
   // Disable another click on reset and preview buttons
-  $( '.button--preview, .button--reset' ).addClass( 'button--disabled' );
+  $( '.js-preview-button, .button--reset' ).addClass( 'button--disabled' );
 });
 
 }); // Close doc ready
