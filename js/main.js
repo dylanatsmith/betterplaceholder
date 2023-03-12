@@ -36,7 +36,7 @@ function updateColours() {
 
 // Reenable preview and reset buttons when any input changes
 $( 'input' ).on( 'change keyup paste', function () {
-  $( '.js-preview-button, .button--reset, .js-copy-button' ).removeClass( 'button--disabled' );
+  $( '.js-preview-button, .js-reset-button, .js-copy-button' ).removeClass( 'button--disabled' );
 });
 
 // Updates value for width every time a key is entered in that field
@@ -106,7 +106,7 @@ $( '.js-preview-button' ).click(function() {
 });
 
 // Reset button
-$('.button--reset').click(function() {
+$('.js-reset-button').click(function() {
   $(':input','form')
     .not(':button, :submit, :reset, :hidden')
     .val('')
@@ -129,7 +129,7 @@ $('.button--reset').click(function() {
   // Add new image with new URL
   $( '.preview-image' ).append( '<img src="https://via.placeholder.com/600x400">' );
   // Disable another click on reset and preview buttons
-  $( '.js-preview-button, .button--reset' ).addClass( 'button--disabled' );
+  $( '.js-preview-button, .js-reset-button' ).addClass( 'button--disabled' );
 });
 
 }); // Close doc ready
