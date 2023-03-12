@@ -38,80 +38,76 @@
   <meta name="twitter:image" content="">
 </head>
 
-<body class="m-0 d-flex color-fg-default color-bg-subtle f5">
+<body class="m-0 d-flex flex-column flex-sm-row color-fg-default color-bg-subtle f5">
 
-  <div class="sidebar p-4">
+  <div class="sidebar p-4 border-sm-right">
 
     <header>
       <h1 class="f5 text-bold">Better Placeholder</h1>
     </header>
 
     <main>
-      <form action="javascript:myFunction(); return false;">
-
-        <div class="color-bg-default border rounded-2 p-3 mt-3">
-          <div class="split">
-            <label for="input-width">Width</label>
-            <input class="form-control" name="input-width" id="input-width" type="number" value="600" min="1">
-          </div>
-
-          <div class="split mt-2">
-            <label for="input-height">Height</label>
-            <input class="form-control" name="input-height" id="input-height" type="number" value="600" min="1">
-          </div>
-
-          <!--
-          <div class="section">
-            <span class="colour-swap">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 14 12">
-                <path fill="currentColor" d="M11,8.956039 L11,7 L14,10 L11,13 L11,10.9639381 C8.58496707,10.7766264 7.25180791,9.84161105 5.44309949,7.74065413 C5.40506397,7.69646724 5.40506397,7.69646724 5.3672312,7.65252314 C3.62410628,5.62824903 2.58284167,5 5.32907052e-15,5 L5.32907052e-15,3 C3.26438055,3 4.79595186,3.92407655 6.8827688,6.34747686 C6.9209004,6.39176805 6.9209004,6.39176805 6.95879722,6.43579384 C8.40015094,8.11003942 9.3057347,8.78806938 11,8.956039 Z M11,3.0330665 L11,1 L14,4 L11,7 L11,5.03902131 C9.77023146,5.1459553 8.9256943,5.48375897 8.07201178,6.18740069 C7.95822605,6.06128299 7.8401101,5.92677684 7.71664609,5.78336369 L7.67882035,5.7394214 L7.64060561,5.69503271 C7.32921773,5.33342097 7.02719089,5.00318656 6.72973347,4.70230828 C7.9454216,3.67167177 9.18510427,3.16145238 11,3.0330665 Z M3.96111882,7.5870913 C4.16461979,7.79869882 4.37864274,8.03699764 4.6094624,8.30504627 L4.64714986,8.3488225 L4.68520933,8.39303631 C4.89322156,8.63465886 5.09644341,8.86186994 5.29638053,9.07531853 C3.81693314,10.4554713 2.41279746,11 5.32907052e-15,11 L5.32907052e-15,9 C1.83766878,9 2.82630342,8.65079882 3.96111882,7.5870913 Z" transform="translate(0 -1)"/>
-              </svg>
-            </span>
-          </div>
-          -->
-
-          <div class="split mt-3">
-            <label for="input-bgcolour">Background</label>
-            <input class="form-control input--colour" name="input-bgcolour" id="input-bgcolour" type="text" value="#ccc">
-          </div>
-
-          <div class="split mt-2">
-            <label for="input-textcolour">Text</label>
-            <input class="form-control input--colour" name="input-textcolour" id="input-textcolour" type="text" value="#969696">
-          </div>
-
-          <div class="mt-3">
-            <label for="input-string">Custom text</label>
-            <input class="form-control mt-1" name="input-string" id="input-string" type="text" placeholder="Optional string">
-          </div>
-
-          <fieldset class="mt-3 d-flex">
-            <label for="input-filetype-png" class="flex-1">
-              <input type="radio" value="png" name="filetype" id="input-filetype-png"> PNG
-            </label>
-            <label for="input-filetype-gif" class="flex-1">
-              <input type="radio" value="gif" name="filetype" id="input-filetype-gif"> GIF
-            </label>
-            <label for="input-filetype-jpg" class="flex-1">
-              <input type="radio" value="jpg" name="filetype" id="input-filetype-jpg"> JPG
-            </label>
-            <label for="input-filetype-jpeg" class="flex-1">
-              <input type="radio" value="jpeg" name="filetype" id="input-filetype-jpeg"> JPEG
-            </label>
-          </fieldset>
-
-          <div class="d-flex flex-wrap mt-3">
-            <button class="btn flex-1 button--preview button--disabled" type="button">
-              Update preview
-            </button>
-
-            <button class="btn btn-danger ml-2 button--reset button--disabled" type="button">
-              Reset
-            </button>
-          </div>
+      <div class="color-bg-default border rounded-2 p-3 mt-3">
+        <div class="split">
+          <label for="input-width">Width</label>
+          <input class="form-control" name="input-width" id="input-width" type="number" value="600" min="1">
         </div>
 
-      </form>
+        <div class="split mt-2">
+          <label for="input-height">Height</label>
+          <input class="form-control" name="input-height" id="input-height" type="number" value="400" min="1">
+        </div>
+
+        <!--
+        <div class="section">
+          <span class="colour-swap">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 14 12">
+              <path fill="currentColor" d="M11,8.956039 L11,7 L14,10 L11,13 L11,10.9639381 C8.58496707,10.7766264 7.25180791,9.84161105 5.44309949,7.74065413 C5.40506397,7.69646724 5.40506397,7.69646724 5.3672312,7.65252314 C3.62410628,5.62824903 2.58284167,5 5.32907052e-15,5 L5.32907052e-15,3 C3.26438055,3 4.79595186,3.92407655 6.8827688,6.34747686 C6.9209004,6.39176805 6.9209004,6.39176805 6.95879722,6.43579384 C8.40015094,8.11003942 9.3057347,8.78806938 11,8.956039 Z M11,3.0330665 L11,1 L14,4 L11,7 L11,5.03902131 C9.77023146,5.1459553 8.9256943,5.48375897 8.07201178,6.18740069 C7.95822605,6.06128299 7.8401101,5.92677684 7.71664609,5.78336369 L7.67882035,5.7394214 L7.64060561,5.69503271 C7.32921773,5.33342097 7.02719089,5.00318656 6.72973347,4.70230828 C7.9454216,3.67167177 9.18510427,3.16145238 11,3.0330665 Z M3.96111882,7.5870913 C4.16461979,7.79869882 4.37864274,8.03699764 4.6094624,8.30504627 L4.64714986,8.3488225 L4.68520933,8.39303631 C4.89322156,8.63465886 5.09644341,8.86186994 5.29638053,9.07531853 C3.81693314,10.4554713 2.41279746,11 5.32907052e-15,11 L5.32907052e-15,9 C1.83766878,9 2.82630342,8.65079882 3.96111882,7.5870913 Z" transform="translate(0 -1)"/>
+            </svg>
+          </span>
+        </div>
+        -->
+
+        <div class="split mt-3">
+          <label for="input-bgcolour">Background</label>
+          <input class="form-control input--colour" name="input-bgcolour" id="input-bgcolour" type="text" value="#ccc">
+        </div>
+
+        <div class="split mt-2">
+          <label for="input-textcolour">Text</label>
+          <input class="form-control input--colour" name="input-textcolour" id="input-textcolour" type="text" value="#969696">
+        </div>
+
+        <div class="mt-3">
+          <label for="input-string">Custom text</label>
+          <input class="form-control mt-1" name="input-string" id="input-string" type="text">
+        </div>
+
+        <fieldset class="mt-3 d-flex">
+          <label for="input-filetype-png" class="flex-1">
+            <input type="radio" value="png" name="filetype" id="input-filetype-png" checked> PNG
+          </label>
+          <label for="input-filetype-gif" class="flex-1">
+            <input type="radio" value="gif" name="filetype" id="input-filetype-gif"> GIF
+          </label>
+          <label for="input-filetype-jpg" class="flex-1">
+            <input type="radio" value="jpg" name="filetype" id="input-filetype-jpg"> JPG
+          </label>
+          <label for="input-filetype-jpeg" class="flex-1">
+            <input type="radio" value="jpeg" name="filetype" id="input-filetype-jpeg"> JPEG
+          </label>
+        </fieldset>
+
+        <div class="d-flex flex-wrap mt-3">
+          <button class="btn flex-1 button--preview button--disabled" type="button">
+            Update preview
+          </button>
+
+          <button class="btn btn-danger ml-2 button--reset button--disabled" type="button">
+            Reset
+          </button>
+        </div>
+      </div>
 
       <div class="color-bg-default border rounded-2 p-3 mt-3">
         <div class="created-url border color-border-muted rounded-1 color-bg-subtle p-2 text-mono f6">
@@ -120,8 +116,8 @@
         </div>
 
         <div class="d-flex flex-wrap mt-2">
-          <button class="btn btn-primary btn-block   button--copy" type="button">
-            Copy image URL
+          <button class="btn btn-primary btn-block button--copy" type="button">
+            <span>Copy image URL</span>
           </button>
         </div>
       </div>
