@@ -55,7 +55,7 @@
             <input class="form-control" name="input-width" id="input-width" type="number" value="600" min="1">
           </div>
 
-          <div class="split">
+          <div class="split mt-2">
             <label for="input-height">Height</label>
             <input class="form-control" name="input-height" id="input-height" type="number" value="600" min="1">
           </div>
@@ -70,30 +70,34 @@
           </div>
           -->
 
-          <div class="split">
+          <div class="split mt-3">
             <label for="input-bgcolour">Background</label>
             <input class="form-control input--colour" name="input-bgcolour" id="input-bgcolour" type="text" value="#ccc">
           </div>
 
-          <div class="split">
+          <div class="split mt-2">
             <label for="input-textcolour">Text</label>
             <input class="form-control input--colour" name="input-textcolour" id="input-textcolour" type="text" value="#969696">
           </div>
 
-          <label for="input-string">Custom text</label>
-          <input class="form-control" name="input-string" id="input-string" type="text" placeholder="Optional string">
+          <div class="mt-3">
+            <label for="input-string">Custom text</label>
+            <input class="form-control mt-1" name="input-string" id="input-string" type="text" placeholder="Optional string">
+          </div>
 
-          <fieldset>
-            <label for="input-filetype-png">
+
+
+          <fieldset class="mt-3 d-flex">
+            <label for="input-filetype-png" class="flex-1">
               <input type="radio" value="png" name="filetype" id="input-filetype-png"> PNG
             </label>
-            <label for="input-filetype-gif">
+            <label for="input-filetype-gif" class="flex-1">
               <input type="radio" value="gif" name="filetype" id="input-filetype-gif"> GIF
             </label>
-            <label for="input-filetype-jpg">
+            <label for="input-filetype-jpg" class="flex-1">
               <input type="radio" value="jpg" name="filetype" id="input-filetype-jpg"> JPG
             </label>
-            <label for="input-filetype-jpeg">
+            <label for="input-filetype-jpeg" class="flex-1">
               <input type="radio" value="jpeg" name="filetype" id="input-filetype-jpeg"> JPEG
             </label>
           </fieldset>

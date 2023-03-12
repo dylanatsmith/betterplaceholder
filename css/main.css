@@ -104,7 +104,6 @@ img {
 }
 
 #input-string {
-  margin-top: 0.5rem;
   width: 100%;
 }
 
@@ -115,10 +114,6 @@ img {
 }
 .split input {
   width: 50%;
-}
-
-.split + .split {
-  margin-top: 0.5rem;
 }
 
 /* Plugins */
