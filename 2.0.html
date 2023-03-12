@@ -18,7 +18,7 @@
   <meta name="theme-color" content="#cccccc">
 
   <!-- Styles and scripts -->
-  <link href="https://unpkg.com/@primer/css@^20.2.4/dist/primer.css" rel="stylesheet" />
+  <link href="https://unpkg.com/@primer/css@^20.8.3/dist/primer.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/main.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="js/main-min.js"></script>
@@ -40,7 +40,7 @@
 
 <body class="m-0 d-flex flex-column flex-sm-row color-fg-default color-bg-subtle f5">
 
-  <div class="sidebar p-4 border-sm-right">
+  <div class="p-4 border-sm-right overflow-y-auto flex-shrink-0" style="@media screen and (min-width: 544px) { flex-basis: 20%; }">
 
     <header>
       <h1 class="f5 text-bold">Better Placeholder</h1>
@@ -48,14 +48,14 @@
 
     <main>
       <div class="color-bg-default border rounded-2 p-3 mt-3">
-        <div class="split">
-          <label for="input-width">Width</label>
-          <input class="form-control" name="input-width" id="input-width" type="number" value="600" min="1">
+        <div class="d-flex flex-items-center">
+          <label class="flex-1 mr-3" for="input-width">Width</label>
+          <input class="flex-1 form-control width-full" name="input-width" id="input-width" type="number" value="600" min="1">
         </div>
 
-        <div class="split mt-2">
-          <label for="input-height">Height</label>
-          <input class="form-control" name="input-height" id="input-height" type="number" value="400" min="1">
+        <div class="mt-2 d-flex flex-items-center">
+          <label class="flex-1 mr-3" for="input-height">Height</label>
+          <input class="flex-1 form-control width-full" name="input-height" id="input-height" type="number" value="400" min="1">
         </div>
 
         <!--
@@ -68,31 +68,34 @@
         </div>
         -->
 
-        <div class="split mt-3">
-          <label for="input-bgcolour">Background</label>
-          <input class="form-control input--colour" name="input-bgcolour" id="input-bgcolour" type="text" value="#ccc">
+        <div class="mt-3 d-flex flex-items-center">
+          <label class="flex-1 mr-3" for="input-bgcolour">Background</label>
+          <input class="flex-1 form-control input--colour" name="input-bgcolour" id="input-bgcolour" type="text" value="#ccc">
         </div>
 
-        <div class="split mt-2">
-          <label for="input-textcolour">Text</label>
-          <input class="form-control input--colour" name="input-textcolour" id="input-textcolour" type="text" value="#969696">
+        <div class="mt-2 d-flex flex-items-center">
+          <label class="flex-1 mr-3"for="input-textcolour">Text</label>
+          <input class="flex-1 form-control input--colour" name="input-textcolour" id="input-textcolour" type="text" value="#969696">
         </div>
 
         <div class="mt-3">
           <label for="input-string">Custom text</label>
-          <input class="form-control mt-1" name="input-string" id="input-string" type="text">
+          <input class="form-control mt-1 width-full" name="input-string" id="input-string" type="text">
         </div>
 
         <fieldset class="mt-3 d-flex">
           <label for="input-filetype-png" class="flex-1">
             <input type="radio" value="png" name="filetype" id="input-filetype-png" checked> PNG
           </label>
+
           <label for="input-filetype-gif" class="flex-1">
             <input type="radio" value="gif" name="filetype" id="input-filetype-gif"> GIF
           </label>
+
           <label for="input-filetype-jpg" class="flex-1">
             <input type="radio" value="jpg" name="filetype" id="input-filetype-jpg"> JPG
           </label>
+
           <label for="input-filetype-jpeg" class="flex-1">
             <input type="radio" value="jpeg" name="filetype" id="input-filetype-jpeg"> JPEG
           </label>
@@ -126,23 +129,18 @@
     </main>
 
     <footer class="mt-3 f6 color-fg-subtle">
-      <p class="m-0">
-        Created and maintained by <a href="https://dylanatsmith.com">Dylan Smith.</a>
-      </p>
-      <p class="m-0">
-        Open source on <a href="http://github.com/dylanatsmith/better-placeholder">GitHub</a>.
-      </p>
+      <p class="m-0">Created and maintained by <a href="https://dylanatsmith.com">Dylan Smith.</a></p>
+      <p class="m-0">Open source on <a href="http://github.com/dylanatsmith/better-placeholder">GitHub</a>.</p>
     </footer>
 
   </div>
 
-  <aside class="preview p-4">
+  <aside class="p-4 flex-sm-1 d-flex flex-items-center flex-justify-center overflow-y-auto">
     <div class="preview-image">
       <img
         src="https://via.placeholder.com/600x400"
         alt="Preview of placeholder image"
-        class="border rounded-2"
-      >
+        class="border rounded-2 width-fit height-fit">
     </div>
   </aside>
 
