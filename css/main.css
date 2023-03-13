@@ -29004,6 +29004,12 @@ svg {
   }
 }
 
+.btn-primary {
+  --color-btn-primary-bg: var(--color-accent-emphasis);
+  --color-btn-primary-hover-bg: #0F5FBD;
+  --color-btn-primary-selected-bg: #0D53A5;
+}
+
 .button--disabled {
   opacity: 0.5;
   pointer-events: none;
