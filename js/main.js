@@ -27,7 +27,6 @@ var $textcolour      = $('#textcolour');
 var $inputTextcolour = $('#input-textcolour');
 var $string          = $('#string');
 var $inputString     = $('#input-string');
-var $filetype        = $('#filetype');
 var $font            = $('#font');
 
 function updateColours() {
@@ -72,16 +71,10 @@ $inputString.on('change keydown paste', function () {
       var newStr = '?text=' + str.replace( /\s+/g, '+' );
       // Display string in URL
       $string.html( newStr );
-      // Update font value
     }
 
     updateFont();
   }, 0);
-});
-
-// Updates value for filetype every time a new option is selected
-$('#input-filetype').on('change', function () {
-  $filetype.html( '.' + $('#input-filetype').val() );
 });
 
 // Updates font value every time a new option is selected
@@ -139,16 +132,15 @@ $('.js-reset-button').click(function() {
     .removeAttr('checked')
     .removeAttr('selected');
   // Clear all the variable spans
-  $( '#bgcolour, #textcolour, #filetype, #string, #font' ).empty();
+  $( '#bgcolour, #textcolour, #string, #font' ).empty();
   $( '#width' ).text( '600');
   $( '#height' ).text( 'x400');
-  // Reset dimensions, colours, string, and filetype to defaults
+  // Reset dimensions, colours, string, and font to defaults
   $( '#input-width' ).val( '600' );
   $( '#input-height' ).val( '400' );
   $( '#input-bgcolour' ).val( '#cccccc' );
   $( '#input-textcolour' ).val( '#969696' );
   $( '#input-string' ).val( '' );
-  $( '#input-filetype' ).val( 'png' );
   $( '#input-font' ).val( 'yanone' );
   // Reset colour swatches
   $('#input-bgcolour').parent().find( '.minicolors-swatch-color' ).attr('style', 'background-color: rgb(204, 204, 204); opacity: 1;');
