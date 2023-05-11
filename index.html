@@ -57,16 +57,6 @@
     <main class="flex-1">
       <div class="color-bg-default border rounded-2 p-3 mt-3">
         <div class="d-flex flex-items-center">
-          <label for="input-filetype" class="flex-1 mr-5">Filetype</label>
-          <select name="input-filetype" id="input-filetype" class="form-select flex-1" aria-label="Filetype">
-            <option value="png">PNG</option>
-            <option value="gif">GIF</option>
-            <option value="jpg">JPG</option>
-            <option value="jpeg">JPEG</option>
-          </select>
-        </div>
-
-        <div class="mt-3 d-flex flex-items-center">
           <label class="flex-1 mr-4" for="input-width">Width</label>
           <input class="flex-1 form-control width-full" name="input-width" id="input-width" type="number" value="600" min="1">
         </div>
@@ -84,6 +74,18 @@
         <div class="mt-2 d-flex flex-items-center">
           <label class="flex-1 mr-2" for="input-textcolour">Text</label>
           <input class="flex-1 form-control input--colour" name="input-textcolour" id="input-textcolour" type="text" value="#909090">
+        </div>
+
+        <div class="d-flex flex-items-center mt-3">
+          <label for="input-font" class="flex-1 mr-5">Font</label>
+          <select name="input-font" id="input-font" class="form-select flex-1" aria-label="Font">
+            <option value="bebas">Bebas</option>
+            <option value="lobster">Lobster</option>
+            <option value="museo">Museo</option>
+            <option value="noto">Noto Sans</option>
+            <option value="noto-serif">Noto Serif</option>
+            <option value="yanone" selected>Yanone</option>
+          </select>
         </div>
 
         <div class="mt-3">
@@ -105,7 +107,7 @@
       <div class="color-bg-default border rounded-2 p-3 mt-3">
         <div class="created-url border color-border-muted rounded-1 color-bg-subtle p-2 text-mono f6 wb-break-word">
           https://fakeimg.pl/<span id="width">600</span><span id="height">x400</span><span
-            id="bgcolour"></span><span id="textcolour"></span><span id="filetype"></span><span id="string"></span>
+            id="bgcolour"></span><span id="textcolour"></span><span id="string"></span><span id="font"></span>
         </div>
 
         <div class="d-flex flex-wrap mt-2">

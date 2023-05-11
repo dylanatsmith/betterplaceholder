@@ -27,7 +27,7 @@ var $textcolour      = $('#textcolour');
 var $inputTextcolour = $('#input-textcolour');
 var $string          = $('#string');
 var $inputString     = $('#input-string');
-var $filetype        = $('#filetype');
+var $font            = $('#font');
 
 function updateColours() {
   $bgcolour.html( '/' + $inputBgcolour.val().replace( '#', '' ) );
@@ -62,18 +62,38 @@ $inputTextcolour.on('change keydown paste', function () {
 // Updates value for string every time a key is entered in that field
 $inputString.on('change keydown paste', function () {
   setTimeout(function () {
-    // Change spaces for plus signs
     var str = $inputString.val();
-    var newStr = '?text=' + str.replace( /\s+/g, '+' );
-    // Display string in URL
-    $string.html( newStr );
+
+    if ( str == '' ) {
+      $string.empty();
+    } else {
+      // Change spaces for plus signs
+      var newStr = '?text=' + str.replace( /\s+/g, '+' );
+      // Display string in URL
+      $string.html( newStr );
+    }
+
+    updateFont();
   }, 0);
 });
 
-// Updates value for filetype every time a new radio button is clicked
-$('#input-filetype').on('change', function () {
-  $filetype.html( '.' + $('#input-filetype').val() );
+// Updates font value every time a new option is selected
+$('#input-font').on('change', function () {
+  updateFont();
 });
+
+
+// Update the font value
+function updateFont() {
+  if ( $('#input-font').val() == 'yanone' ) {
+    $font.text( '' );
+  } else if ( $inputString.val() == '' ) {
+    $font.text( '?font=' + $('#input-font').val() );
+  } else {
+    $font.text( '&font=' + $('#input-font').val() );
+  }
+}
+
 
 // Instantiate clipboard.js
 var clipboard = new Clipboard('.js-copy-button', {
@@ -112,16 +132,16 @@ $('.js-reset-button').click(function() {
     .removeAttr('checked')
     .removeAttr('selected');
   // Clear all the variable spans
-  $( '#bgcolour, #textcolour, #filetype, #string' ).empty();
+  $( '#bgcolour, #textcolour, #string, #font' ).empty();
   $( '#width' ).text( '600');
   $( '#height' ).text( 'x400');
-  // Reset dimensions, colours, string, and filetype to defaults
+  // Reset dimensions, colours, string, and font to defaults
   $( '#input-width' ).val( '600' );
   $( '#input-height' ).val( '400' );
   $( '#input-bgcolour' ).val( '#cccccc' );
   $( '#input-textcolour' ).val( '#969696' );
   $( '#input-string' ).val( '' );
-  $( '#input-filetype' ).val( 'png' );
+  $( '#input-font' ).val( 'yanone' );
   // Reset colour swatches
   $('#input-bgcolour').parent().find( '.minicolors-swatch-color' ).attr('style', 'background-color: rgb(204, 204, 204); opacity: 1;');
   $('#input-textcolour').parent().find('.minicolors-swatch-color').attr('style', 'background-color: rgb(150, 150, 150); opacity: 1;');
