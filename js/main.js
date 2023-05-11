@@ -128,7 +128,7 @@ $('.js-reset-button').click(function() {
   // Remove existing preview image
   $('.preview-image').empty();
   // Add new image with new URL
-  $('.preview-image' ).append('<img src="https://via.placeholder.com/600x400">');
+  $('.preview-image' ).append('<img src="https://fakeimg.pl/600x400">');
   // Disable another click on reset and preview buttons
   $('.js-preview-button, .js-reset-button').addClass('button--disabled');
 });

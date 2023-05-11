@@ -2,7 +2,7 @@
 
 Quickly generate custom placeholder images for your design and development projects.
 
-Builds on the via.placeholder.com service.
+Builds on the fakeimg.pl service.
 
 ## Local development
 
