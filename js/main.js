@@ -28,6 +28,8 @@ var $inputTextcolour = $('#input-textcolour');
 var $string          = $('#string');
 var $inputString     = $('#input-string');
 var $font            = $('#font');
+var $inputFontSize   = $('#input-fontsize');
+var $fontSize        = $('#fontsize');
 
 function updateColours() {
   $bgcolour.html( '/' + $inputBgcolour.val().replace( '#', '' ) );
@@ -80,8 +82,9 @@ $inputString.on('change keydown paste', function () {
 // Updates font value every time a new option is selected
 $('#input-font').on('change', function () {
   updateFont();
+  // We also run updateFontSize to re-check if the font size is set and whether its param should be preceded by ? or &
+  updateFontSize();
 });
-
 
 // Update the font value
 function updateFont() {
@@ -94,6 +97,21 @@ function updateFont() {
   }
 }
 
+// Updates font size value every time a new option is selected
+$inputFontSize.on('change', function () {
+  updateFontSize();
+});
+
+// Updates font size value
+function updateFontSize() {
+  if ( $inputFontSize.val() == '' ) {
+    $fontSize.empty();
+  } else if ( $inputString.val() == '' && $font.text() == '' ) {
+    $fontSize.text( '?font_size=' + $inputFontSize.val() );
+  } else {
+    $fontSize.text( '&font_size=' + $inputFontSize.val() );
+  }
+}
 
 // Instantiate clipboard.js
 var clipboard = new Clipboard('.js-copy-button', {
@@ -135,6 +153,7 @@ $('.js-reset-button').click(function() {
   $( '#bgcolour, #textcolour, #string, #font' ).empty();
   $( '#width' ).text( '600');
   $( '#height' ).text( 'x400');
+  $( '#fontsize' ).empty();
   // Reset dimensions, colours, string, and font to defaults
   $( '#input-width' ).val( '600' );
   $( '#input-height' ).val( '400' );
@@ -142,6 +161,7 @@ $('.js-reset-button').click(function() {
   $( '#input-textcolour' ).val( '#969696' );
   $( '#input-string' ).val( '' );
   $( '#input-font' ).val( 'yanone' );
+  $( '#input-fontsize').val( '' );
   // Reset colour swatches
   $('#input-bgcolour').parent().find( '.minicolors-swatch-color' ).attr('style', 'background-color: rgb(204, 204, 204); opacity: 1;');
   $('#input-textcolour').parent().find('.minicolors-swatch-color').attr('style', 'background-color: rgb(150, 150, 150); opacity: 1;');
