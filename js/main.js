@@ -76,6 +76,7 @@ $inputString.on('change keydown paste', function () {
     }
 
     updateFont();
+    updateFontSize();
   }, 0);
 });
 
